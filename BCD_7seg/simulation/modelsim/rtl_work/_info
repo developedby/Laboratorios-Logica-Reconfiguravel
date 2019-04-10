@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pet\Documents\Nicolas\BCD_7seg\simulation\modelsim
+Ebcd_7seg
+Z1 w1553698404
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\pet\Documents\Nicolas\BCD_7seg\simulation\modelsim
+Z6 8C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+Z7 FC:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+l0
+L5
+V5kSHQ8LJQJo_mG89FfRcN1
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1554234708.905000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd|
+Z11 !s107 C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd|
+Z12 o-work work -O0
+Z13 tExplicit 1
+!s100 e2Y]MDT3<C_[T`BCbOI=90
+!i10b 1
+Aarch_bcd_7seg
+R2
+R3
+R4
+DEx4 work 8 bcd_7seg 0 22 5kSHQ8LJQJo_mG89FfRcN1
+l16
+L15
+VAlFg27hLk7>Y:GZ6MCZ<a0
+!s100 U53b8i`]<eAEAoM>`=zVe0
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!i10b 1
+Ebcd_7seg_tb
+Z14 w1554234201
+R2
+R3
+R4
+R5
+Z15 8C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+Z16 FC:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+l0
+L5
+V3>1O[KY1MmLaTk_WVSoWG0
+!s100 fP=3GF?9<0Oi2<Be_8ZGR1
+R8
+32
+!i10b 1
+Z17 !s108 1554234709.280000
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd|
+Z19 !s107 C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd|
+R12
+R13
+Aarch_bcd_7seg_tb
+R2
+R3
+R4
+DEx4 work 11 bcd_7seg_tb 0 22 3>1O[KY1MmLaTk_WVSoWG0
+l24
+L8
+V3@^QOzGT981f9_[3E5DRM1
+!s100 [W5<B1gPEj0kh13:gTWCb3
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R12
+R13

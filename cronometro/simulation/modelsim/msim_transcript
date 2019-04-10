@@ -1,0 +1,1122 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do cronometro_digital_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/BCD_7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture arch_bcd_7seg of bcd_7seg
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cont16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont16
+# -- Compiling architecture arq of cont16
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+# 
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture arch_bcd_7seg of bcd_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cont16.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont16
+# -- Compiling architecture arq of cont16
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: (vcom-11) Could not find ieee.n.
+# 
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(5): (vcom-1195) Cannot find expanded name "ieee.n".
+# 
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(5): near "entity": expecting '[' or '(' or '.' or '\''
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture arch_bcd_7seg of bcd_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cont16.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont16
+# -- Compiling architecture arq of cont16
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(30): Signal "d10e_m2" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(31): Signal "d10e_m1" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(32): Signal "d10e_0" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(33): Signal "d10e_1" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(50): (vcom-1136) Unknown identifier "s".
+# 
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(50): Integer literal 62 is not of type std.STANDARD.TIME.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(63): (vcom-1136) Unknown identifier "s".
+# 
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(63): Integer literal 10 is not of type std.STANDARD.TIME.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(65): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(30): Signal "d10e_m2" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(31): Signal "d10e_m1" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(32): Signal "d10e_0" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(33): Signal "d10e_1" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd(65): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+# Break key hit 
+# Break in Process line__36 at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd line 40
+run for 130000 ms
+# ** Error: (vsim-4001) Incorrect number of arguments.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+quit -sim
+run for 130000 ms
+# No Design Loaded!
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run for 130000 ms
+# ** Error: (vsim-4001) Incorrect number of arguments.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# Break key hit 
+# Simulation stop requested.
+quit -sim
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# Break key hit 
+# Break in Process line__36 at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd line 40
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+# Break key hit 
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Fatal: (vsim-3421) Value 500001 for CONT is out of range 0 to 500000.
+#    Time: 20000040 ns  Iteration: 1  Process: /cronometro_digital_tb/uut/clk_divisor/line__20 File: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Fatal error in Process line__20 at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd line 32
+# 
+# HDL call sequence:
+# Stopped at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd 32 Process line__20
+# 
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture arch_bcd_7seg of bcd_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cont16.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont16
+# -- Compiling architecture arq of cont16
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Fatal: (vsim-3421) Value 500001 for CONT is out of range 0 to 500000.
+#    Time: 20000040 ns  Iteration: 1  Process: /cronometro_digital_tb/uut/clk_divisor/line__19 File: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Fatal error in Process line__19 at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd line 29
+# 
+# HDL call sequence:
+# Stopped at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd 29 Process line__19
+# 
+quit -sim
+vsim rtl_work.divisor
+# vsim rtl_work.divisor 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.divisor(x)
+# Changing window so values will track the active time
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_tb
+# -- Compiling architecture x of divisor_tb
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_tb
+# -- Compiling architecture x of divisor_tb
+quit -sim
+vsim rtl_work.divisor_tb(x)
+# vsim rtl_work.divisor_tb(x) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.divisor_tb(x)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 100 ms
+# ** Fatal: (vsim-3421) Value 500001 for CONT is out of range 0 to 500000.
+#    Time: 10000010 ns  Iteration: 1  Process: /divisor_tb/uut/line__19 File: C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Fatal error in Process line__19 at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd line 29
+# 
+# HDL call sequence:
+# Stopped at C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd 29 Process line__19
+# 
+quit -sim
+# Load canceled
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_tb
+# -- Compiling architecture x of divisor_tb
+# Load canceled
+vsim rtl_work.divisor_tb(x)
+# vsim rtl_work.divisor_tb(x) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.divisor_tb(x)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 100 ms
+quit -sim
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# WARNING: No extended dataflow license exists
+# Break key hit 
+# Simulation stop requested.
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture arch_bcd_7seg of bcd_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cont16.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont16
+# -- Compiling architecture arq of cont16
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/divisor.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor
+# -- Compiling architecture x of divisor
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital
+# -- Compiling architecture arq of cronometro_digital
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/tarefas-logica-reconfiguravel/cronometro/cronometro_digital_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_digital_tb
+# -- Compiling architecture arch of cronometro_digital_tb
+vsim rtl_work.cronometro_digital_tb(arch)
+# vsim rtl_work.cronometro_digital_tb(arch) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.cronometro_digital_tb(arch)
+# Loading rtl_work.cronometro_digital(arq)
+# Loading rtl_work.cont16(arq)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# Loading rtl_work.divisor(x)
+add wave -r /*
+run 130000 ms
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cronometro_digital_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_m1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /cronometro_digital_tb/uut/bcd_7seg_d10e_1
+# Break key hit 
+# Simulation stop requested.

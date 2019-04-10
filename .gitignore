@@ -1,0 +1,7 @@
+*.bak
+db/
+incremental_db/
+*.wlf
+*.pof
+*.sof
+*.rpt

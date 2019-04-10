@@ -1,0 +1,143 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do BCD_7seg_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg
+# -- Compiling architecture arch_BCD_7seg of BCD_7seg
+# 
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg
+# -- Compiling architecture arch_BCD_7seg of BCD_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg_tb
+# -- Compiling architecture arch_BCD_7seg_tb of BCD_7seg_tb
+vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# ** Failure: (vsim-3817) Port "clk" of entity "bcd_7seg" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /bcd_7seg_tb/uut File: C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd Line: 12
+# Fatal error in file C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+#  while elaborating region: /bcd_7seg_tb/uut
+# Fatal error in file C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+#  while elaborating region: /bcd_7seg_tb
+# Error loading design
+vsim rtl_work.bcd_7seg_tb
+# vsim rtl_work.bcd_7seg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+# ** Failure: (vsim-3817) Port "clk" of entity "bcd_7seg" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /bcd_7seg_tb/uut File: C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd Line: 12
+# Fatal error in file C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+#  while elaborating region: /bcd_7seg_tb/uut
+# Fatal error in file C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+#  while elaborating region: /bcd_7seg_tb
+# Error loading design
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg
+# -- Compiling architecture arch_BCD_7seg of BCD_7seg
+vcom -reportprogress 300 -work work C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg_tb
+# -- Compiling architecture arch_BCD_7seg_tb of BCD_7seg_tb
+vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
+add wave -r /*
+run 3 us
+run 2 us
+run 1 us
+quit -sim
+do C:/Users/pet/Documents/Nicolas/BCD_7seg/simulation/modelsim/BCD_7seg_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/pet/Documents/Nicolas/BCD_7seg/BCD_7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg
+# -- Compiling architecture arch_BCD_7seg of BCD_7seg
+# 
+do C:/Users/pet/Documents/Nicolas/BCD_7seg/bcd_7seg_simul.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg
+# -- Compiling architecture arch_BCD_7seg of BCD_7seg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BCD_7seg_tb
+# -- Compiling architecture arch_BCD_7seg_tb of BCD_7seg_tb
+# vsim rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.bcd_7seg_tb(arch_bcd_7seg_tb)
+# Loading rtl_work.bcd_7seg(arch_bcd_7seg)
