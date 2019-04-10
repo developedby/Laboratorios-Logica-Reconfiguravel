@@ -7,3 +7,6 @@ incremental_db/
 *.rpt
 *.bak*
 rtl_work/
+*.summary
+*.done
+*.smsg
