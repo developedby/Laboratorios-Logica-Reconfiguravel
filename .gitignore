@@ -5,3 +5,5 @@ incremental_db/
 *.pof
 *.sof
 *.rpt
+*.bak*
+rtl_work/

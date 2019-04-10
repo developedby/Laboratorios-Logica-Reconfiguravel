@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Apr 09 15:15:46 2019
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Wed Apr 10 09:32:10 2019
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : cronometro_digital
 Top-level Entity Name : cronometro_digital
 Family : Cyclone II
-Total logic elements : 774
-    Total combinational functions : 498
-    Dedicated logic registers : 540
-Total registers : 540
+Total logic elements : 934
+    Total combinational functions : 538
+    Dedicated logic registers : 684
+Total registers : 684
 Total pins : 33
 Total virtual pins : 0
-Total memory bits : 2,176
+Total memory bits : 3,712
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

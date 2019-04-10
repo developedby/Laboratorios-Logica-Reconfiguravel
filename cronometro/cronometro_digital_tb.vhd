@@ -8,22 +8,23 @@ end entity;
 architecture arch of cronometro_digital_tb is
 	component cronometro_digital is
 		port
-		(
-			clk, btn1, btn2 : in std_logic;
-			d10e_m2 : out unsigned(6 downto 0);
-			d10e_m1 : out unsigned(6 downto 0);
-			d10e_0 : out unsigned(6 downto 0);
-			d10e_1 : out unsigned(6 downto 0);
-			display_en : in std_logic
-		);
+	  (
+		  clk, hard_rst, btn1, btn2 : in std_logic;
+		  d10e_m2 : out unsigned(6 downto 0); -- display de 10^-2 s
+		  d10e_m1 : out unsigned(6 downto 0); -- display de 10^-1 s
+		  d10e_0 : out unsigned(6 downto 0); -- display de 10^0 s
+    		d10e_1 : out unsigned(6 downto 0); -- display de 10^1 s
+		  display_en : in std_logic
+   	);
 	end component;
-	signal clk, btn1, btn2, display_en : std_logic;
+	signal clk, btn1, btn2, display_en, hard_rst : std_logic;
 	signal d10e_m2, d10e_m1, d10e_0, d10e_1 : unsigned(6 downto 0);
 begin
 	uut: cronometro_digital
 	port map
 	(
 		clk => clk,
+		hard_rst => hard_rst,
 		btn1 => btn1,
 		btn2 => btn2,
 		display_en => display_en,
@@ -41,9 +42,12 @@ begin
 	end process;
 	process
 	begin
+	  hard_rst <= '1';
 		btn1 <= '1';
 		btn2 <= '1';
 		display_en <= '1';
+		wait for 10 ns;
+		hard_rst <= '0';
 		wait for 100 ms;
 		btn1 <= '0';
 		wait for 100 ms;
