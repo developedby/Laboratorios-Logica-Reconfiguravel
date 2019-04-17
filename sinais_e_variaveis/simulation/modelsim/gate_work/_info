@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Daeln\laboratorios-logica-reconfiguravel\sinais_e_variaveis\simulation\modelsim
+Esinais_e_variaveis
+Z1 w1555513223
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 Oi3I0k`LZ6YG;P<IP9P3W1
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 0WXB<Sgk6hOd5>ljP5KG63
+Z8 dC:\Users\Daeln\laboratorios-logica-reconfiguravel\sinais_e_variaveis\simulation\modelsim
+Z9 8sinais_e_variaveis.vho
+Z10 Fsinais_e_variaveis.vho
+l0
+L34
+Va1?mk=hl@]W0E?5QVk]1]2
+!s100 k@cD2[bYVN;5;0dO`E2e^0
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1555513441.622000
+Z13 !s90 -reportprogress|300|-93|-work|work|sinais_e_variaveis.vho|
+Z14 !s107 sinais_e_variaveis.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 18 sinais_e_variaveis 0 22 a1?mk=hl@]W0E?5QVk]1]2
+l124
+L86
+VzS9EJIa[Dg7R]6S3GMe4M2
+!s100 KD8@zZ?T>c1;1GX0jVmB02
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16

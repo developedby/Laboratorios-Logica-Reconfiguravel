@@ -1,86 +1,79 @@
 # Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
-# do sinais_e_variaveis_run_msim_rtl_vhdl.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do sinais_e_variaveis_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/sinais_e_variaveis.vhd}
+# vcom -93 -work work {sinais_e_variaveis.vho}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
 # -- Compiling entity sinais_e_variaveis
-# -- Compiling architecture arch of sinais_e_variaveis
+# -- Compiling architecture structure of sinais_e_variaveis
 # 
-vcom -reportprogress 300 -work work C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1.vhd
+vcom -reportprogress 300 -work work C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/sinais_e_variaveis_tb.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity ex1
-# -- Compiling architecture arch of ex1
-vcom -reportprogress 300 -work work C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ex1_tb
-# -- Compiling architecture test of ex1_tb
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(16): near "signal": expecting END
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(17): (vcom-1294) Declaration with designator "signal_out" already exists in this region.
-# ** =====> Prior declaration of "signal_out" is at C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(13).
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(17): (vcom-1294) Declaration with designator "var_out" already exists in this region.
-# ** =====> Prior declaration of "var_out" is at C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(14).
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(24): (vcom-1484) Unknown formal identifier "clk".
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(25): (vcom-1484) Unknown formal identifier "rst".
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(26): (vcom-1484) Unknown formal identifier "signal_out".
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(27): (vcom-1484) Unknown formal identifier "var_out".
-# 
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(32): Cannot drive signal 'rst' of mode IN.
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(34): Cannot drive signal 'rst' of mode IN.
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(40): Cannot drive signal 'clk' of mode IN.
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(42): Cannot drive signal 'clk' of mode IN.
-# ** Error: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd(45): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ex1
-# -- Compiling architecture arch of ex1
-vcom -reportprogress 300 -work work C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/sinais_e_variaveis/ex1_tb.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ex1_tb
-# -- Compiling architecture test of ex1_tb
-vsim rtl_work.ex1_tb(test)
-# vsim rtl_work.ex1_tb(test) 
+# -- Compiling entity sinais_e_variaveis_tb
+# -- Compiling architecture test of sinais_e_variaveis_tb
+vsim +altera -do sinais_e_variaveis_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /UUT=C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/simulation/modelsim/sinais_e_variaveis_vhd.sdo work.sinais_e_variaveis_tb(test)
+# vsim +altera -do sinais_e_variaveis_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /UUT=C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/simulation/modelsim/sinais_e_variaveis_vhd.sdo work.sinais_e_variaveis_tb(test) 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading rtl_work.ex1_tb(test)
-# Loading rtl_work.ex1(arch)
+# Loading work.sinais_e_variaveis_tb(test)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.sinais_e_variaveis(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading instances from C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/simulation/modelsim/sinais_e_variaveis_vhd.sdo
+# Loading timing data from C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/simulation/modelsim/sinais_e_variaveis_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /sinais_e_variaveis_tb File: C:/Users/Daeln/laboratorios-logica-reconfiguravel/sinais_e_variaveis/sinais_e_variaveis_tb.vhd
+# do sinais_e_variaveis_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {sinais_e_variaveis.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity sinais_e_variaveis
+# -- Compiling architecture structure of sinais_e_variaveis
+# 
 add wave -r /*
-run for 1 us
-# ** Error: (vsim-4001) Incorrect number of arguments.
-# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
 run 1 us
+# WARNING: No extended dataflow license exists

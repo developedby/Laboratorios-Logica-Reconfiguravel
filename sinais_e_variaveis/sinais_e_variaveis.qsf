@@ -53,6 +53,44 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_AF10 -to d_ex1_signal_out[6]
+set_location_assignment PIN_AB12 -to d_ex1_signal_out[5]
+set_location_assignment PIN_AC12 -to d_ex1_signal_out[4]
+set_location_assignment PIN_AD11 -to d_ex1_signal_out[3]
+set_location_assignment PIN_AE11 -to d_ex1_signal_out[2]
+set_location_assignment PIN_V14 -to d_ex1_signal_out[1]
+set_location_assignment PIN_V13 -to d_ex1_signal_out[0]
+set_location_assignment PIN_V20 -to d_ex1_var_out[6]
+set_location_assignment PIN_V21 -to d_ex1_var_out[5]
+set_location_assignment PIN_W21 -to d_ex1_var_out[4]
+set_location_assignment PIN_Y22 -to d_ex1_var_out[3]
+set_location_assignment PIN_AA24 -to d_ex1_var_out[2]
+set_location_assignment PIN_AA23 -to d_ex1_var_out[1]
+set_location_assignment PIN_AB24 -to d_ex1_var_out[0]
+set_location_assignment PIN_AB23 -to d_ex2_for_out[6]
+set_location_assignment PIN_V22 -to d_ex2_for_out[5]
+set_location_assignment PIN_AC25 -to d_ex2_for_out[4]
+set_location_assignment PIN_AC26 -to d_ex2_for_out[3]
+set_location_assignment PIN_AB26 -to d_ex2_for_out[2]
+set_location_assignment PIN_AB25 -to d_ex2_for_out[1]
+set_location_assignment PIN_Y24 -to d_ex2_for_out[0]
+set_location_assignment PIN_Y23 -to d_ex2_signal_out[6]
+set_location_assignment PIN_AA25 -to d_ex2_signal_out[5]
+set_location_assignment PIN_AA26 -to d_ex2_signal_out[4]
+set_location_assignment PIN_Y26 -to d_ex2_signal_out[3]
+set_location_assignment PIN_Y25 -to d_ex2_signal_out[2]
+set_location_assignment PIN_U22 -to d_ex2_signal_out[1]
+set_location_assignment PIN_W24 -to d_ex2_signal_out[0]
+set_location_assignment PIN_U9 -to d_ex2_while_out[6]
+set_location_assignment PIN_U1 -to d_ex2_while_out[5]
+set_location_assignment PIN_U2 -to d_ex2_while_out[4]
+set_location_assignment PIN_T4 -to d_ex2_while_out[3]
+set_location_assignment PIN_R7 -to d_ex2_while_out[2]
+set_location_assignment PIN_R6 -to d_ex2_while_out[1]
+set_location_assignment PIN_T3 -to d_ex2_while_out[0]
+set_location_assignment PIN_V2 -to rst
+set_location_assignment PIN_G26 -to clk
 set_global_assignment -name VHDL_FILE bcd_7seg.vhd
 set_global_assignment -name VHDL_FILE sinais_e_variaveis.vhd
 set_global_assignment -name VHDL_FILE ex1.vhd
