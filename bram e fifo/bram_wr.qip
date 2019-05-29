@@ -4,3 +4,4 @@ set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "bram_wr.v
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "bram_wr.bsf"]
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "bram_wr_inst.vhd"]
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "bram_wr.cmp"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "bram_wr_syn.v"]

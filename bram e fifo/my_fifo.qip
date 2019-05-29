@@ -4,3 +4,4 @@ set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "my_fifo.v
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "my_fifo.bsf"]
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "my_fifo_inst.vhd"]
 set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "my_fifo.cmp"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "my_fifo_syn.v"]
