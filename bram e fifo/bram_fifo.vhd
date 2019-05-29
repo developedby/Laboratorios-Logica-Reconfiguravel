@@ -19,12 +19,12 @@ architecture arch1 of bram_fifo is
 		PORT
 		(
 			aclr			: IN STD_LOGIC  := '0';
-			data			: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			data			: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			rdclk			: IN STD_LOGIC ;
 			rdreq			: IN STD_LOGIC ;
 			wrclk			: IN STD_LOGIC ;
 			wrreq			: IN STD_LOGIC ;
-			q				: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+			q				: OUT STD_LOGIC_VECTOR (9 DOWNTO 0);
 			rdempty		: OUT STD_LOGIC ;
 			rdfull		: OUT STD_LOGIC ;
 			rdusedw		: OUT STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -37,9 +37,9 @@ architecture arch1 of bram_fifo is
 			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			clken		: IN STD_LOGIC  := '1';
 			clock		: IN STD_LOGIC  := '1';
-			data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			data		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			wren		: IN STD_LOGIC ;
-			q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+			q			: OUT STD_LOGIC_VECTOR (9 DOWNTO 0)
 		);
 	END component;
 	component bram_rd IS
@@ -47,12 +47,12 @@ architecture arch1 of bram_fifo is
 		(
 			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			clock		: IN STD_LOGIC  := '1';
-			data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			data		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			wren		: IN STD_LOGIC ;
-			q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+			q			: OUT STD_LOGIC_VECTOR (9 DOWNTO 0)
 		);
 	END component;
-	component divisor is
+	component div2 is
 		port	
 		(
 			clk : in std_logic;
@@ -60,7 +60,14 @@ architecture arch1 of bram_fifo is
 			div : out std_logic
 		 );	 
 	End component;
-	
+	component div10 is
+		port	
+		(
+			clk : in std_logic;
+			rst : in std_logic;
+			div : out std_logic
+		 );	 
+	End component;
 	component BCD_7seg is
 		port
 		(
@@ -72,25 +79,37 @@ architecture arch1 of bram_fifo is
 		);
 	end component;
 	
-	signal clk_ram_rd_toggle, clk_ram_rd 			  : std_logic;
-	signal ram_rd_addr, ram_wr_addr		 			  : std_logic_vector (9 downto 0);
-	signal ram_rd_out, ram_wr_out			 			  : std_logic_vector (7 downto 0);
-	signal ram_rd_wren, ram_wr_wren			  		  : std_logic;
-	signal ram_wr_clken									  : std_logic;
-	signal fifo_wrreq, fifo_rdreq				  		  : std_logic;
-	signal fifo_data_in, fifo_data_out				  : std_logic_vector (7 downto 0);
-	signal fifo_empty, fifo_full, fifo_almost_full : std_logic;
-	signal fifo_used_words					 			  : std_logic_vector (9 downto 0);
-	signal ram_rd_out_10_0, ram_rd_out_10_1, ram_rd_out_10_2 : unsigned (7 downto 0);
-	signal ram_rd_addr_cnt 								  : std_logic_vector (9 downto 0);
+	signal clk_ram_rd_toggle, clk_ram_rd : std_logic;
+	signal clk_ram_wr_toggle, clk_ram_wr : std_logic;
+	signal ram_rd_addr, ram_wr_addr : std_logic_vector (9 downto 0);
+	signal ram_rd_out, ram_wr_out : std_logic_vector (9 downto 0);
+	signal ram_rd_wren, ram_wr_wren : std_logic;
+	signal ram_wr_clken : std_logic;
+	signal fifo_wrreq, fifo_rdreq : std_logic;
+	signal fifo_data_in, fifo_data_out0 : std_logic_vector (9 downto 0);
+	signal fifo_empty, fifo_full : std_logic;
+	signal fifo_almost_full, fifo_almost_empty : std_logic;
+	signal fifo_used_words : std_logic_vector (9 downto 0);
+	signal ram_rd_out_10_0, ram_rd_out_10_1, ram_rd_out_10_2 : unsigned (9 downto 0);
+	signal ram_rd_addr_cnt : std_logic_vector (9 downto 0);
+  signal strategy, backpressure : std_logic;
 begin
+  strategy <= '0';
+
 	-- Instancias dos componentes
-	div5 : divisor
+	div2 : div2
 		port map
 		(
 			clk => clk,
 			rst => rst,
 			div => clk_ram_rd_toggle
+		);
+	div10 : div10
+		port map
+		(
+			clk => clk,
+			rst => rst,
+			div => clk_ram_wr_toggle
 		);
 	ram_rd : bram_rd
 		port map
@@ -159,6 +178,15 @@ begin
 			clk_ram_rd <= not clk_ram_rd;
 		end if;
 	end process;
+	-- Clock do lado de write
+	process (rst, clk_ram_wr_toggle)
+	begin
+		if rst = '1' then
+			clk_ram_wr <= '0';
+		elsif clk_ram_wr_toggle'event and clk_ram_wr_toggle='1' then
+			clk_ram_wr <= not clk_ram_wr;
+		end if;
+	end process;
 	
 	-- Endereço de read
 	-- Quando esta pausado mostra o endereco indicado pelos switches
@@ -196,12 +224,68 @@ begin
 	-- Entrada de dados da fifo
 	fifo_data_in <= ram_wr_out;
 	
-	-- Enable das rams
+	-- Write enable das rams
 	ram_rd_wren <= not pause_sw and not fifo_empty;
 	ram_wr_wren <= '0';
-	ram_wr_clken <= not pause_sw and not fifo_almost_full and not fifo_full;
+	
+	-- Clk enable das rams
+	process(rst, clk, pause_sw, strategia, ram_wr_clken, fifo_almost_full, fifo_almost_empty, backpressure)
+	begin
+	  if rst = '1' then
+	    ram_wr_clken <= '0';
+	  else
+	    if rising_edge(clk) then
+	      if pause_sw = '0' then
+	        if strategy = '0' then
+	          if ram_wr_clken = '1' then
+	            if fifo_almost_full = '1' then
+	              ram_wr_clken <= '0';
+	            else
+	              ram_wr_clken <= '1';
+	            end if;
+	          else
+	            if fifo_almost_empty = '1' then
+	              ram_wr_clken <= '1';
+	            else
+	              ram_wr_clken <= '0';
+	          end if;
+	        else
+	          ram_wr_clken <= not backpressure;
+	        end if;
+	      else
+	        ram_wr_clken <= '0';
+	      end if;
+	    end if;
+	  end if;
+	end process;
+	ram_rd_clken <= not pause_sw and not fifo_almost_full and not fifo_full;
+	
+	-- Back pressure
+	process(rst, clk, fifo_almost_full, fifo_almost_empty, backpressure)
+	begin
+	  if rst = '1' then
+	    backpressure <= '0';
+	  else
+	    if rising_edge(clk) then
+	      if backpressure = '0' then
+	        if fifo_almost_full = '1' then
+	          backpressure <= '1';
+	        else
+	          backpressure <= '0';
+	        end if;
+	      else
+	        if fifo_almost_empty = '1' then
+	          backpressure <= '0';
+	        else
+	          backpressure <= '1';
+	        end if;
+	      end if
+	    end if;
+	  end if;
+	end process;
 	
 	fifo_almost_full <= '1' when unsigned(fifo_used_words) >= 768 else '0';
+	fifo_almost_empty <= '1' when unsigned(fifo_used_words) <= 512 else '0';
 	
 	-- Fifo requests
 	fifo_wrreq <= ram_wr_clken;
