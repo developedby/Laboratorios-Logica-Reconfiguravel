@@ -1,0 +1,27 @@
+
+WORK > DEFAULT
+DEFAULT:                                                      ./libraries/work/                                                        
+work:                                                         ./libraries/work/                                                        
+irq_mapper:                                                   ./libraries/irq_mapper/                                                  
+rsp_xbar_mux:                                                 ./libraries/rsp_xbar_mux/                                                
+cmd_xbar_mux:                                                 ./libraries/cmd_xbar_mux/                                                
+cmd_xbar_demux_001:                                           ./libraries/cmd_xbar_demux_001/                                          
+cmd_xbar_demux:                                               ./libraries/cmd_xbar_demux/                                              
+id_router_001:                                                ./libraries/id_router_001/                                               
+id_router:                                                    ./libraries/id_router/                                                   
+addr_router_001:                                              ./libraries/addr_router_001/                                             
+addr_router:                                                  ./libraries/addr_router/                                                 
+memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: ./libraries/memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
+jtag_uart:                                                    ./libraries/jtag_uart/                                                   
+cpu:                                                          ./libraries/cpu/                                                         
+memory:                                                       ./libraries/memory/                                                      
+jtag_uart_sys_inst_reset_bfm:                                 ./libraries/jtag_uart_sys_inst_reset_bfm/                                
+jtag_uart_sys_inst_clk_bfm:                                   ./libraries/jtag_uart_sys_inst_clk_bfm/                                  
+jtag_uart_sys_inst:                                           ./libraries/jtag_uart_sys_inst/                                          
+altera:                                                       ./libraries/altera/                                                      
+lpm:                                                          ./libraries/lpm/                                                         
+sgate:                                                        ./libraries/sgate/                                                       
+altera_mf:                                                    ./libraries/altera_mf/                                                   
+altera_lnsim:                                                 ./libraries/altera_lnsim/                                                
+cycloneii:                                                    ./libraries/cycloneii/                                                   
+LIBRARY_SCAN = TRUE

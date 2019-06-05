@@ -12,3 +12,4 @@ rtl_work/
 *.smsg
 *.vho
 modelsim/
+output_files/
