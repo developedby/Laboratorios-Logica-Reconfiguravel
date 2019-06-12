@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0 156 win32 2019.06.05.11:51:12
+# ACDS 13.0 156 win32 2019.06.12.10:41:58
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -49,17 +49,15 @@ mkdir -p ./libraries/work/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/rsp_xbar_mux_001/
 mkdir -p ./libraries/rsp_xbar_mux/
-mkdir -p ./libraries/rsp_xbar_demux_001/
+mkdir -p ./libraries/rsp_xbar_demux_002/
 mkdir -p ./libraries/cmd_xbar_mux/
 mkdir -p ./libraries/cmd_xbar_demux_001/
 mkdir -p ./libraries/cmd_xbar_demux/
-mkdir -p ./libraries/id_router_001/
+mkdir -p ./libraries/id_router_002/
 mkdir -p ./libraries/id_router/
 mkdir -p ./libraries/addr_router_001/
 mkdir -p ./libraries/addr_router/
-mkdir -p ./libraries/memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
-mkdir -p ./libraries/regs/
-mkdir -p ./libraries/rcvd_byte/
+mkdir -p ./libraries/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/jtag_uart/
 mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/memory/
@@ -109,36 +107,34 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_irq_mapper.vho"                                                   -work irq_mapper                                                   -cdslib ./cds_libs/irq_mapper.cds.lib                                                  
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_mux_001.vho"                                             -work rsp_xbar_mux_001                                             -cdslib ./cds_libs/rsp_xbar_mux_001.cds.lib                                            
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_mux.vho"                                                 -work rsp_xbar_mux                                                 -cdslib ./cds_libs/rsp_xbar_mux.cds.lib                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_demux_001.vho"                                           -work rsp_xbar_demux_001                                           -cdslib ./cds_libs/rsp_xbar_demux_001.cds.lib                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_mux.vho"                                                 -work cmd_xbar_mux                                                 -cdslib ./cds_libs/cmd_xbar_mux.cds.lib                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_demux_001.vho"                                           -work cmd_xbar_demux_001                                           -cdslib ./cds_libs/cmd_xbar_demux_001.cds.lib                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_demux.vho"                                               -work cmd_xbar_demux                                               -cdslib ./cds_libs/cmd_xbar_demux.cds.lib                                              
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_id_router_001.vho"                                                -work id_router_001                                                -cdslib ./cds_libs/id_router_001.cds.lib                                               
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_id_router.vho"                                                    -work id_router                                                    -cdslib ./cds_libs/id_router.cds.lib                                                   
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_addr_router_001.vho"                                              -work addr_router_001                                              -cdslib ./cds_libs/addr_router_001.cds.lib                                             
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_addr_router.vho"                                                  -work addr_router                                                  -cdslib ./cds_libs/addr_router.cds.lib                                                 
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -cdslib ./cds_libs/memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_regs.vhd"                                                         -work regs                                                         -cdslib ./cds_libs/regs.cds.lib                                                        
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rcvd_byte.vhd"                                                    -work rcvd_byte                                                    -cdslib ./cds_libs/rcvd_byte.cds.lib                                                   
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_jtag_uart.vhd"                                                    -work jtag_uart                                                    -cdslib ./cds_libs/jtag_uart.cds.lib                                                   
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu.vhd"                                                          -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_sysclk.vhd"                                 -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_tck.vhd"                                    -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_wrapper.vhd"                                -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_oci_test_bench.vhd"                                           -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_test_bench.vhd"                                               -work cpu                                                          -cdslib ./cds_libs/cpu.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_memory.vhd"                                                       -work memory                                                       -cdslib ./cds_libs/memory.cds.lib                                                      
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys.vhd"                                                                                                                                                                                                                                   
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_memory_s1_translator.vhd"                                                                                                                                                                                                              
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                                                                            
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"                                                                                                                                                                                                  
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_regs_s1_translator.vhd"                                                                                                                                                                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_rcvd_byte_s1_translator.vhd"                                                                                                                                                                                                           
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_data_master_translator.vhd"                                                                                                                                                                                                        
-  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_instruction_master_translator.vhd"                                                                                                                                                                                                 
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_irq_mapper.vho"                                                               -work irq_mapper                                                               -cdslib ./cds_libs/irq_mapper.cds.lib                                                              
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_mux_001.vho"                                                         -work rsp_xbar_mux_001                                                         -cdslib ./cds_libs/rsp_xbar_mux_001.cds.lib                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_mux.vho"                                                             -work rsp_xbar_mux                                                             -cdslib ./cds_libs/rsp_xbar_mux.cds.lib                                                            
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_rsp_xbar_demux_002.vho"                                                       -work rsp_xbar_demux_002                                                       -cdslib ./cds_libs/rsp_xbar_demux_002.cds.lib                                                      
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_mux.vho"                                                             -work cmd_xbar_mux                                                             -cdslib ./cds_libs/cmd_xbar_mux.cds.lib                                                            
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_demux_001.vho"                                                       -work cmd_xbar_demux_001                                                       -cdslib ./cds_libs/cmd_xbar_demux_001.cds.lib                                                      
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cmd_xbar_demux.vho"                                                           -work cmd_xbar_demux                                                           -cdslib ./cds_libs/cmd_xbar_demux.cds.lib                                                          
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_id_router_002.vho"                                                            -work id_router_002                                                            -cdslib ./cds_libs/id_router_002.cds.lib                                                           
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_id_router.vho"                                                                -work id_router                                                                -cdslib ./cds_libs/id_router.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_addr_router_001.vho"                                                          -work addr_router_001                                                          -cdslib ./cds_libs/addr_router_001.cds.lib                                                         
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_addr_router.vho"                                                              -work addr_router                                                              -cdslib ./cds_libs/addr_router.cds.lib                                                             
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -cdslib ./cds_libs/cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_jtag_uart.vhd"                                                                -work jtag_uart                                                                -cdslib ./cds_libs/jtag_uart.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu.vhd"                                                                      -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_sysclk.vhd"                                             -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_tck.vhd"                                                -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_jtag_debug_module_wrapper.vhd"                                            -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_oci_test_bench.vhd"                                                       -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_cpu_test_bench.vhd"                                                           -work cpu                                                                      -cdslib ./cds_libs/cpu.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/submodules/jtag_uart_sys_memory.vhd"                                                                   -work memory                                                                   -cdslib ./cds_libs/memory.cds.lib                                                                  
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys.vhd"                                                                                                                                                                                                                                                                       
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"                                                                                                                                                                                                                                      
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_memory_s1_translator.vhd"                                                                                                                                                                                                                                                  
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                                                                                                                                
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_rst_controller.vhd"                                                                                                                                                                                                                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_rst_controller_001.vhd"                                                                                                                                                                                                                                                    
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_data_master_translator.vhd"                                                                                                                                                                                                                                            
+  ncvhdl -v93 "$QSYS_SIMDIR/jtag_uart_sys_cpu_instruction_master_translator.vhd"                                                                                                                                                                                                                                     
 fi
 
 # ----------------------------------------

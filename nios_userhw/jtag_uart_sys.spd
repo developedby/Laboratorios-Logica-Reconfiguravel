@@ -13,9 +13,9 @@
    type="VHDL"
    library="rsp_xbar_mux" />
  <file
-   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_rsp_xbar_demux_001.vho"
+   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_rsp_xbar_demux_002.vho"
    type="VHDL"
-   library="rsp_xbar_demux_001" />
+   library="rsp_xbar_demux_002" />
  <file
    path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_cmd_xbar_mux.vho"
    type="VHDL"
@@ -49,9 +49,9 @@
    library="rst_controller"
    simulator="riviera" />
  <file
-   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_id_router_001.vho"
+   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_id_router_002.vho"
    type="VHDL"
-   library="id_router_001" />
+   library="id_router_002" />
  <file
    path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_id_router.vho"
    type="VHDL"
@@ -65,28 +65,28 @@
    type="VHDL"
    library="addr_router" />
  <file
-   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
    type="VHDL"
-   library="memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" />
  <file
    path="jtag_uart_sys/simulation/submodules/mentor/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator_avalon_universal_slave_0_agent"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
    simulator="modelsim" />
  <file
    path="jtag_uart_sys/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator_avalon_universal_slave_0_agent"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
    simulator="modelsim" />
  <file
    path="jtag_uart_sys/simulation/submodules/aldec/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator_avalon_universal_slave_0_agent"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
    simulator="riviera" />
  <file
    path="jtag_uart_sys/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator_avalon_universal_slave_0_agent"
+   library="cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent"
    simulator="riviera" />
  <file
    path="jtag_uart_sys/simulation/submodules/mentor/altera_merlin_master_agent.sv"
@@ -101,12 +101,12 @@
  <file
    path="jtag_uart_sys/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator"
+   library="cpu_jtag_debug_module_translator"
    simulator="modelsim" />
  <file
    path="jtag_uart_sys/simulation/submodules/aldec/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="memory_s1_translator"
+   library="cpu_jtag_debug_module_translator"
    simulator="riviera" />
  <file
    path="jtag_uart_sys/simulation/submodules/mentor/altera_merlin_master_translator.sv"
@@ -118,14 +118,6 @@
    type="SYSTEM_VERILOG_ENCRYPT"
    library="cpu_data_master_translator"
    simulator="riviera" />
- <file
-   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_regs.vhd"
-   type="VHDL"
-   library="regs" />
- <file
-   path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_rcvd_byte.vhd"
-   type="VHDL"
-   library="rcvd_byte" />
  <file
    path="jtag_uart_sys/simulation/submodules/jtag_uart_sys_jtag_uart.vhd"
    type="VHDL"
@@ -208,19 +200,19 @@
    library="memory" />
  <file path="jtag_uart_sys/simulation/jtag_uart_sys.vhd" type="VHDL" />
  <file
+   path="jtag_uart_sys/simulation/jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"
+   type="VHDL" />
+ <file
    path="jtag_uart_sys/simulation/jtag_uart_sys_memory_s1_translator.vhd"
    type="VHDL" />
  <file
    path="jtag_uart_sys/simulation/jtag_uart_sys_jtag_uart_avalon_jtag_slave_translator.vhd"
    type="VHDL" />
  <file
-   path="jtag_uart_sys/simulation/jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"
+   path="jtag_uart_sys/simulation/jtag_uart_sys_rst_controller.vhd"
    type="VHDL" />
  <file
-   path="jtag_uart_sys/simulation/jtag_uart_sys_regs_s1_translator.vhd"
-   type="VHDL" />
- <file
-   path="jtag_uart_sys/simulation/jtag_uart_sys_rcvd_byte_s1_translator.vhd"
+   path="jtag_uart_sys/simulation/jtag_uart_sys_rst_controller_001.vhd"
    type="VHDL" />
  <file
    path="jtag_uart_sys/simulation/jtag_uart_sys_cpu_data_master_translator.vhd"

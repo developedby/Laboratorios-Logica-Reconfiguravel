@@ -2,31 +2,32 @@ set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_
 set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "jtag_uart_sys" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.sopcinfo"]
-set_instance_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name SLD_INFO "QSYS_NAME jtag_uart_sys HAS_SOPCINFO 1 GENERATION_ID 1559746279"
+set_instance_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name SLD_INFO "QSYS_NAME jtag_uart_sys HAS_SOPCINFO 1 GENERATION_ID 1560352700"
 set_global_assignment -library "jtag_uart_sys" -name MISC_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "jtag_uart_sys" -name MISC_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.qsys"]
 
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_memory_s1_translator.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_jtag_uart_avalon_jtag_slave_translator.vhd"]
-set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_cpu_jtag_debug_module_translator.vhd"]
-set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_regs_s1_translator.vhd"]
-set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_rcvd_byte_s1_translator.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_reg32_avalon_interface_0_avalon_slave_0_translator.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_rst_controller.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_rst_controller_001.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_cpu_data_master_translator.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "jtag_uart_sys_cpu_instruction_master_translator.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_irq_mapper.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_rsp_xbar_mux_001.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_rsp_xbar_mux.sv"]
-set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_rsp_xbar_demux_001.sv"]
+set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_rsp_xbar_demux_002.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cmd_xbar_mux.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cmd_xbar_demux_001.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cmd_xbar_demux.sv"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "jtag_uart_sys" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
-set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_id_router_001.sv"]
+set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_id_router_002.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_id_router.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_addr_router_001.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_addr_router.sv"]
@@ -36,8 +37,8 @@ set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file jo
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
-set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_regs.v"]
-set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_rcvd_byte.v"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/reg32.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/reg32_avalon_interface.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_jtag_uart.v"]
 set_global_assignment -library "jtag_uart_sys" -name SDC_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cpu.sdc"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cpu.v"]
@@ -61,9 +62,9 @@ set_global_assignment -entity "jtag_uart_sys_rsp_xbar_mux_001" -library "jtag_ua
 set_global_assignment -entity "jtag_uart_sys_rsp_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_multiplexer"
 set_global_assignment -entity "jtag_uart_sys_rsp_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "jtag_uart_sys_rsp_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_001" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
-set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_001" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
-set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_001" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_002" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_002" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "jtag_uart_sys_rsp_xbar_demux_002" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "jtag_uart_sys_cmd_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_multiplexer"
 set_global_assignment -entity "jtag_uart_sys_cmd_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "jtag_uart_sys_cmd_xbar_mux" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
@@ -76,9 +77,9 @@ set_global_assignment -entity "jtag_uart_sys_cmd_xbar_demux" -library "jtag_uart
 set_global_assignment -entity "altera_reset_controller" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_reset_controller"
 set_global_assignment -entity "altera_reset_controller" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_reset_controller" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "jtag_uart_sys_id_router_001" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_router"
-set_global_assignment -entity "jtag_uart_sys_id_router_001" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
-set_global_assignment -entity "jtag_uart_sys_id_router_001" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "jtag_uart_sys_id_router_002" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "jtag_uart_sys_id_router_002" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "jtag_uart_sys_id_router_002" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "jtag_uart_sys_id_router" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "jtag_uart_sys_id_router" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "jtag_uart_sys_id_router" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
@@ -103,12 +104,6 @@ set_global_assignment -entity "altera_merlin_slave_translator" -library "jtag_ua
 set_global_assignment -entity "altera_merlin_master_translator" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_merlin_master_translator"
 set_global_assignment -entity "altera_merlin_master_translator" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_merlin_master_translator" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "jtag_uart_sys_regs" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_avalon_pio"
-set_global_assignment -entity "jtag_uart_sys_regs" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0.1"
-set_global_assignment -entity "jtag_uart_sys_regs" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "jtag_uart_sys_rcvd_byte" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_avalon_pio"
-set_global_assignment -entity "jtag_uart_sys_rcvd_byte" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0.1"
-set_global_assignment -entity "jtag_uart_sys_rcvd_byte" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "jtag_uart_sys_jtag_uart" -library "jtag_uart_sys" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
 set_global_assignment -entity "jtag_uart_sys_jtag_uart" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0.1"
 set_global_assignment -entity "jtag_uart_sys_jtag_uart" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"

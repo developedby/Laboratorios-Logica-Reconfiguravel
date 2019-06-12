@@ -1,0 +1,18 @@
+
+**** Build of configuration Nios II for project teste_led ****
+
+make mem_init_generate 
+Info: Building ../teste_led_bsp/
+make --no-print-directory -C ../teste_led_bsp/
+[BSP build complete]
+Post-processing to create mem_init/jtag_uart_sys_memory.hex...
+bash -c 'elf2hex teste_led.elf 0x00000000 0x00001fff --width=32 \
+		--little-endian-mem --create-lanes=0  mem_init/jtag_uart_sys_memory.hex'
+Post-processing to create mem_init/hdl_sim/jtag_uart_sys_memory.dat...
+bash -c 'elf2dat --infile=teste_led.elf --outfile=mem_init/hdl_sim/jtag_uart_sys_memory.dat \
+		--base=0x00000000 --end=0x00001fff --width=32 \
+		--little-endian-mem --create-lanes=0 '
+Post-processing to create mem_init/hdl_sim/jtag_uart_sys_memory.sym...
+nios2-elf-nm -n teste_led.elf > mem_init/hdl_sim/jtag_uart_sys_memory.sym
+
+**** Build Finished ****

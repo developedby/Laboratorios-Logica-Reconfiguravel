@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+newApplicationWizardPage.defaultLocation=C\:\\Users\\DAELN\\Downloads\\laboratorios-logica-reconfiguravel\\nios_userhw\\software\\exemplo_nios
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\DAELN\\Downloads\\laboratorios-logica-reconfiguravel\\nios_userhw\\software\\teste_led
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\DAELN\\Downloads\\laboratorios-logica-reconfiguravel\\nios_userhw\\jtag_uart_sys.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\DAELN\\Downloads\\laboratorios-logica-reconfiguravel\\nios_userhw\\software\\teste_led_bsp

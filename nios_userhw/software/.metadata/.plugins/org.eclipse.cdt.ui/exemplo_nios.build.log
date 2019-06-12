@@ -1,0 +1,16 @@
+
+**** Build of configuration Nios II for project exemplo_nios ****
+
+make all 
+Info: Building ../teste_uart_bsp/
+make --no-print-directory -C ../teste_uart_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../teste_uart_bsp//HAL/inc -I../teste_uart_bsp/ -I../teste_uart_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:6: error: 'UART_BASE' undeclared (first use in this function)
+main.c:6: error: (Each undeclared identifier is reported only once
+main.c:6: error: for each function it appears in.)
+make: *** [obj/default/main.o] Error 1
+
+**** Build Finished ****

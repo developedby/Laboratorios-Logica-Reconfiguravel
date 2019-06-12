@@ -4,18 +4,21 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity uart_byte_ctl is
-begin
-	clk, rst : in std_logic; -- Clk igual ao baud rate
-	uart_byte : in std_logic_vector(7 downto 0);
-	load_data : out std_logic_vector(7 downto 0);
-	load_counter : out std_logic;
-	en_counter : out std_logic;
+	port
+	(
+		clk, rst : in std_logic; -- Clk igual ao baud rate
+		uart_byte : in std_logic_vector(7 downto 0);
+		load_data : out std_logic_vector(7 downto 0);
+		load_counter : out std_logic;
+		en_counter : out std_logic
+	);
 end entity;
 
 architecture arch of uart_byte_ctl is
 	type states is (command, load);
 	signal state_reg, state_next: states;
 	
+	signal rw_bit : std_logic;
 	signal last_byte : std_logic_vector(7 downto 0);
 	signal cmd : std_logic_vector(2 downto 0);
 	signal load_bit, enable_bit, last_en_bit : std_logic;
@@ -39,12 +42,12 @@ begin
 	begin
 		if state_reg = command then
 			if cmd /= "111" then
-				next_state <= command;
+				state_next <= command;
 			else
-				next_state <= load;
+				state_next <= load;
 			end if;
 		elsif state_reg = load then
-			next_state <= command;
+			state_next <= command;
 		end if;
 	end process;
 	
@@ -54,7 +57,7 @@ begin
 			state_reg <= command;
 			last_byte <= "00000000";
 		elsif rising_edge(clk) then
-			state_reg <= next_state;
+			state_reg <= state_next;
 			last_byte <= uart_byte;
 		end if;
 	end process;

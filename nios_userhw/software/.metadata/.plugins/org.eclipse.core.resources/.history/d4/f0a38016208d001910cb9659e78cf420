@@ -1,0 +1,16 @@
+#include <stdint.h>
+#include "system.h"
+#include "sys/alt_stdio.h"
+
+int main(void)
+{
+   volatile uint32_t *led = (volatile uint32_t*) LED_BASE;
+
+   while (1)
+   {
+	   if(alt_getchar() == 'a')
+		   *led = (*led) | ((0x00000001));
+   }
+
+   return 0;
+}

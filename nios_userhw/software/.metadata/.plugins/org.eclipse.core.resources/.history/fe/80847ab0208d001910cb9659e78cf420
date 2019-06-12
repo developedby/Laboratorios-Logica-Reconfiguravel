@@ -1,0 +1,17 @@
+#include <stdint.h>
+#include "system.h"
+#include "sys/alt_stdio.h"
+
+int main(void)
+{
+   volatile uint32_t *led = (volatile uint32_t*) LED_BASE;
+
+   *led = (*led) | ((0x00000001));
+
+   while (1)
+   {
+	   alt_putchar('a');
+   }
+
+   return 0;
+}
