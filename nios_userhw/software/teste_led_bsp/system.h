@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'jtag_uart_sys'
  * SOPC Builder design path: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/jtag_uart_sys.sopcinfo
  *
- * Generated: Wed Jun 12 11:05:28 BRT 2019
+ * Generated: Wed Jun 19 09:14:11 BRT 2019
  */
 
 /*
@@ -125,8 +125,8 @@
 
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
-#define __ALTERA_AVALON_PIO
 #define __ALTERA_NIOS2_QSYS
+#define __REG32_AVALON_INTERFACE
 
 
 /*
@@ -145,19 +145,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x3010
+#define ALT_STDERR_BASE 0x3000
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x3010
+#define ALT_STDIN_BASE 0x3000
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x3010
+#define ALT_STDOUT_BASE 0x3000
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -181,7 +181,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x3010
+#define JTAG_UART_BASE 0x3000
 #define JTAG_UART_IRQ 5
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -191,33 +191,6 @@
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 64
 #define JTAG_UART_WRITE_THRESHOLD 8
-
-
-/*
- * led configuration
- *
- */
-
-#define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x3000
-#define LED_BIT_CLEARING_EDGE_REGISTER 0
-#define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define LED_CAPTURE 0
-#define LED_DATA_WIDTH 1
-#define LED_DO_TEST_BENCH_WIRING 0
-#define LED_DRIVEN_SIM_VALUE 0
-#define LED_EDGE_TYPE "NONE"
-#define LED_FREQ 50000000
-#define LED_HAS_IN 0
-#define LED_HAS_OUT 1
-#define LED_HAS_TRI 0
-#define LED_IRQ -1
-#define LED_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LED_IRQ_TYPE "NONE"
-#define LED_NAME "/dev/led"
-#define LED_RESET_VALUE 0
-#define LED_SPAN 16
-#define LED_TYPE "altera_avalon_pio"
 
 
 /*
@@ -247,5 +220,19 @@
 #define MEMORY_SPAN 8192
 #define MEMORY_TYPE "altera_avalon_onchip_memory2"
 #define MEMORY_WRITABLE 1
+
+
+/*
+ * reg32_avalon_interface_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_reg32_avalon_interface_0 reg32_avalon_interface
+#define REG32_AVALON_INTERFACE_0_BASE 0x3008
+#define REG32_AVALON_INTERFACE_0_IRQ -1
+#define REG32_AVALON_INTERFACE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define REG32_AVALON_INTERFACE_0_NAME "/dev/reg32_avalon_interface_0"
+#define REG32_AVALON_INTERFACE_0_SPAN 4
+#define REG32_AVALON_INTERFACE_0_TYPE "reg32_avalon_interface"
 
 #endif /* __SYSTEM_H_ */

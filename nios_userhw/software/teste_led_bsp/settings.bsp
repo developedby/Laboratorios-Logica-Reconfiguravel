@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 12, 2019 11:09:41 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1560348581611</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>19/06/2019 12:21:24</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1560957684610</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\DAELN\Downloads\laboratorios-logica-reconfiguravel\nios_userhw\software\teste_led_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\DAELN\Downloads\laboratorios-logica-reconfiguravel\nios_userhw\jtag_uart_sys.sopcinfo</SopcDesignFile>
@@ -869,16 +869,16 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led</slaveDescriptor>
-                <addressRange>0x00003000 - 0x0000300F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00003010 - 0x00003017</addressRange>
+                <addressRange>0x00003000 - 0x00003007</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>reg32_avalon_interface_0</slaveDescriptor>
+                <addressRange>0x00003008 - 0x0000300B</addressRange>
+                <addressSpan>4</addressSpan>
+                <attributes/>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

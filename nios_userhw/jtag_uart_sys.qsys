@@ -109,16 +109,11 @@
  <parameter name="projectName" value="nios_userhw.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1560350631684" />
+ <parameter name="timeStamp" value="1560953163993" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
- <interface
-   name="to_hex"
-   internal="reg32_avalon_interface_0.conduit_end"
-   type="conduit"
-   dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -288,7 +283,7 @@
  </module>
  <module
    kind="reg32_avalon_interface"
-   version="1.0"
+   version="2.0"
    enabled="1"
    name="reg32_avalon_interface_0" />
  <connection kind="interrupt" version="13.0" start="cpu.d_irq" end="jtag_uart.irq">
@@ -360,6 +355,11 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="reg32_avalon_interface_0.reset_sink" />
+ <connection
    kind="avalon"
    version="13.0"
    start="cpu.data_master"
@@ -373,11 +373,6 @@
    version="13.0"
    start="clk_0.clk"
    end="reg32_avalon_interface_0.clock_sink" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="reg32_avalon_interface_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

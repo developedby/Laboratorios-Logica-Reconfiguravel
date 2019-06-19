@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2019.06.12.12:18:21</td>
+    <td class="l">2019.06.19.12:20:52</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -101,7 +101,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </a> altera_avalon_jtag_uart 13.0.1
      <br/>&#160;&#160;
      <a href="#module_reg32_avalon_interface_0"><b>reg32_avalon_interface_0</b>
-     </a> reg32_avalon_interface 1.0</span>
+     </a> reg32_avalon_interface 2.1</span>
    </div>
   </div>
   <div style="width:100% ;  height:10px"> </div>
@@ -1316,37 +1316,37 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <a name="module_reg32_avalon_interface_0"> </a>
   <div>
    <hr/>
-   <h2>reg32_avalon_interface_0</h2>reg32_avalon_interface v1.0
+   <h2>reg32_avalon_interface_0</h2>reg32_avalon_interface v2.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_cpu">cpu</a>
-      </td>
-      <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="7">reg32_avalon_interface_0</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;avalon_slave_0</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
       <td class="neighbor" rowspan="4">
        <a href="#module_clk_0">clk_0</a>
       </td>
+      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="main" rowspan="7">reg32_avalon_interface_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset_sink</td>
+     </tr>
+     <tr>
       <td class="from">clk&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock_sink</td>
      </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
+     <tr style="height:6px">
+      <td></td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;reset_sink</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_cpu">cpu</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
      </tr>
     </table>
    </div>
@@ -1379,7 +1379,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0,00 seconds</td>
-    <td class="r">rendering took 0,05 seconds</td>
+    <td class="r">rendering took 0,04 seconds</td>
    </tr>
   </table>
  </body>

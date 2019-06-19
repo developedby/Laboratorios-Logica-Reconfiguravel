@@ -158,21 +158,21 @@ ELF_PATCH_FLAG  += --simulation_enabled false
 # multiple inheritance and exceptions are not supported. If false, adds 
 # -DALT_NO_C_PLUS_PLUS to ALT_CPPFLAGS in public.mk, and reduces code 
 # footprint. none 
-# setting hal.enable_c_plus_plus is false
+# setting hal.enable_c_plus_plus is 0
 ALT_CPPFLAGS += -DALT_NO_C_PLUS_PLUS
 
 # When your application exits, close file descriptors, call C++ destructors, 
 # etc. Code footprint can be reduced by disabling clean exit. If disabled, adds 
 # -DALT_NO_CLEAN_EXIT to ALT_CPPFLAGS and -Wl,--defsym, exit=_exit to 
 # ALT_LDFLAGS in public.mk. none 
-# setting hal.enable_clean_exit is false
+# setting hal.enable_clean_exit is 0
 ALT_CPPFLAGS += -DALT_NO_CLEAN_EXIT
 ALT_LDFLAGS += -Wl,--defsym,exit=_exit
 
 # Add exit() support. This option increases code footprint if your "main()" 
 # routine does "return" or call "exit()". If false, adds -DALT_NO_EXIT to 
 # ALT_CPPFLAGS in public.mk, and reduces footprint none 
-# setting hal.enable_exit is false
+# setting hal.enable_exit is 0
 ALT_CPPFLAGS += -DALT_NO_EXIT
 
 # Causes code to be compiled with gprof profiling enabled and the application 
@@ -188,7 +188,7 @@ ALT_CPPFLAGS += -DALT_NO_EXIT
 # devices. If true, adds -DALT_USE_DIRECT_DRIVERS to ALT_CPPFLAGS in public.mk. 
 # The Altera Host and read-only ZIP file systems can't be used if 
 # hal.enable_lightweight_device_driver_api is true. 
-# setting hal.enable_lightweight_device_driver_api is true
+# setting hal.enable_lightweight_device_driver_api is 1
 ALT_CPPFLAGS += -DALT_USE_DIRECT_DRIVERS
 
 # Adds code to emulate multiply and divide instructions in case they are 
@@ -208,7 +208,7 @@ ALT_CPPFLAGS += -DALT_NO_INSTRUCTION_EMULATION
 # access routines) to fail. You can define a symbol provided by each driver to 
 # prevent it from being removed. If true, adds -DALT_USE_SMALL_DRIVERS to 
 # ALT_CPPFLAGS in public.mk. none 
-# setting hal.enable_reduced_device_drivers is true
+# setting hal.enable_reduced_device_drivers is 1
 ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 
 # Turns on HAL runtime stack checking feature. Enabling this setting causes 
@@ -230,7 +230,7 @@ ALT_CPPFLAGS += -DALT_USE_SMALL_DRIVERS
 # are removed such as floating-point support in printf(), stdin input routines, 
 # and buffered I/O. The small C library is not compatible with Micrium 
 # MicroC/OS-II. If true, adds -msmallc to ALT_LDFLAGS in public.mk. none 
-# setting hal.enable_small_c_library is true
+# setting hal.enable_small_c_library is 1
 ALT_LDFLAGS += -msmallc
 ALT_CPPFLAGS += -DSMALL_C_LIB
 
@@ -243,7 +243,7 @@ ALT_CPPFLAGS += -DSMALL_C_LIB
 # application .elf file (and BSP it is linked against) corresponds to the 
 # hardware design on the target. If false, adds --accept-bad-sysid to 
 # SOPC_SYSID_FLAG in public.mk. none 
-# setting hal.enable_sopc_sysid_check is false
+# setting hal.enable_sopc_sysid_check is 0
 SOPC_SYSID_FLAG += --accept-bad-sysid
 
 # Enable BSP generation to query if SOPC system is big endian. If true ignores 

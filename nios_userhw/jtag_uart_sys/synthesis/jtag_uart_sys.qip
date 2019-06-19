@@ -2,7 +2,7 @@ set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_
 set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "jtag_uart_sys" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.sopcinfo"]
-set_instance_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name SLD_INFO "QSYS_NAME jtag_uart_sys HAS_SOPCINFO 1 GENERATION_ID 1560352700"
+set_instance_assignment -entity "jtag_uart_sys" -library "jtag_uart_sys" -name SLD_INFO "QSYS_NAME jtag_uart_sys HAS_SOPCINFO 1 GENERATION_ID 1560957651"
 set_global_assignment -library "jtag_uart_sys" -name MISC_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "jtag_uart_sys" -name MISC_FILE [file join $::quartus(qip_path) "../../jtag_uart_sys.qsys"]
@@ -37,8 +37,11 @@ set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file jo
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "jtag_uart_sys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
-set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/reg32.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bit_counter.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/cont8.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/reg32_avalon_interface.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/uart_byte_ctl.vhd"]
+set_global_assignment -library "jtag_uart_sys" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/userhw.vhd"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_jtag_uart.v"]
 set_global_assignment -library "jtag_uart_sys" -name SDC_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cpu.sdc"]
 set_global_assignment -library "jtag_uart_sys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/jtag_uart_sys_cpu.v"]

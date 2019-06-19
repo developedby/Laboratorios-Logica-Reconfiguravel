@@ -13,3 +13,5 @@ rtl_work/
 *.vho
 modelsim/
 output_files/
+*.rpt
+.history/

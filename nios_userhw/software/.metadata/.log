@@ -609,3 +609,13 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY org.eclipse.cdt.core 1 0 2019-06-12 11:05:55.704
 !MESSAGE Indexed 'blinker' (0 sources, 8 headers) in 0,00 sec: 0 declarations; 0 references; 8 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+!SESSION 2019-06-19 08:46:25.312 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data C:\Users\DAELN\Downloads\laboratorios-logica-reconfiguravel\nios_userhw\software -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-06-19 08:46:26.174
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

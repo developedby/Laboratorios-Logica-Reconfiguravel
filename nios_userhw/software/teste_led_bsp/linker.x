@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'jtag_uart_sys'
  * SOPC Builder design path: C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/jtag_uart_sys.sopcinfo
  *
- * Generated: Wed Jun 12 11:09:41 BRT 2019
+ * Generated: Wed Jun 19 09:14:11 BRT 2019
  */
 
 /*

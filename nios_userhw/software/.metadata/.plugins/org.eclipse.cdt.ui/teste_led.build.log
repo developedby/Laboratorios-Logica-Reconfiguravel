@@ -1,18 +1,19 @@
 
 **** Build of configuration Nios II for project teste_led ****
 
-make mem_init_generate 
+make all 
 Info: Building ../teste_led_bsp/
 make --no-print-directory -C ../teste_led_bsp/
 [BSP build complete]
-Post-processing to create mem_init/jtag_uart_sys_memory.hex...
-bash -c 'elf2hex teste_led.elf 0x00000000 0x00001fff --width=32 \
-		--little-endian-mem --create-lanes=0  mem_init/jtag_uart_sys_memory.hex'
-Post-processing to create mem_init/hdl_sim/jtag_uart_sys_memory.dat...
-bash -c 'elf2dat --infile=teste_led.elf --outfile=mem_init/hdl_sim/jtag_uart_sys_memory.dat \
-		--base=0x00000000 --end=0x00001fff --width=32 \
-		--little-endian-mem --create-lanes=0 '
-Post-processing to create mem_init/hdl_sim/jtag_uart_sys_memory.sym...
-nios2-elf-nm -n teste_led.elf > mem_init/hdl_sim/jtag_uart_sys_memory.sym
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../teste_led_bsp//HAL/inc -I../teste_led_bsp/ -I../teste_led_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+Info: Linking teste_led.elf
+nios2-elf-g++  -T'../teste_led_bsp//linker.x' -msys-crt0='../teste_led_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../teste_led_bsp/  -Wl,--defsym,exit=_exit -msmallc  -Wl,-Map=teste_led.map   -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o teste_led.elf obj/default/main.o -lm 
+nios2-elf-insert teste_led.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name jtag_uart_sys --quartus_project_dir "C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw" --sopcinfo C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/jtag_uart_sys.sopcinfo
+Info: (teste_led.elf) 1296 Bytes program size (code + initialized data).
+Info:                 6896 Bytes free for stack + heap.
+Info: Creating teste_led.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source teste_led.elf >teste_led.objdump
+[teste_led build complete]
 
 **** Build Finished ****
