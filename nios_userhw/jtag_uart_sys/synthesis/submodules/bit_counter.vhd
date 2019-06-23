@@ -15,7 +15,7 @@ architecture arch of bit_counter is
 
 begin
 		
-	process(clk)
+	process(input)
 		variable for_var : std_logic_vector(7 downto 0);
 	begin
 		for_var := "00000000";

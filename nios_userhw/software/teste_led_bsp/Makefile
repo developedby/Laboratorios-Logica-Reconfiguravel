@@ -103,7 +103,7 @@ ACDS_VERSION := 13.0
 # BUILD_NUMBER: 156
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/jtag_uart_sys.sopcinfo
+SOPC_FILE := ../../jtag_uart_sys.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

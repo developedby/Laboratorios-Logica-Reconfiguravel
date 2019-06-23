@@ -5,7 +5,7 @@
 BSP_TYPE=hal
 BSP_DIR=.
 SOPC_DIR=../../
-SOPC_FILE=C:/Users/DAELN/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/jtag_uart_sys.sopcinfo
+SOPC_FILE=jtag_uart_sys.sopcinfo
 NIOS2_BSP_ARGS=""
 CPU_NAME=
 

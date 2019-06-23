@@ -23,26 +23,38 @@ architecture arch of uart_byte_ctl is
 	signal rw_bit : std_logic;
 	signal last_byte : std_logic_vector(7 downto 0);
 	signal cmd : std_logic_vector(2 downto 0);
-	signal load_bit, enable_bit, last_en_bit : std_logic;
+	signal load_bit, enable_bit : std_logic;
 	signal data0 : std_logic_vector(2 downto 0);
 	signal data1 : std_logic_vector(4 downto 0);
-	signal en_counter_reg : std_logic;
+	signal en_counter_reg, load_counter_reg : std_logic;
+	signal load_data_reg : std_logic_vector(7 downto 0);
 	signal out_sel_reg : std_logic_vector(1 downto 0);
 	
 begin
-	rw_bit <= uart_byte(7);
-	
 	cmd <= uart_byte(7 downto 5);
 	
 	load_bit <= uart_byte(1);
 	
 	enable_bit <= uart_byte(0);
-	last_en_bit <= last_byte(0);
 	
 	data0 <= last_byte(4 downto 2);
 	data1 <= uart_byte(4 downto 0);
-	load_data <= data0 & data1;
+	
+	process (clk, rst, state_reg, avalon_en)
+	begin
+		if rst = '1' then
+			load_data_reg <= (others => '0');
+		elsif rising_edge(clk) then
+			if state_reg = load and avalon_en = '1' then
+				load_data_reg <= data1 & data0;
+			else
+				load_data_reg <= load_data_reg;
+			end if;
+		end if;
+	end process;
 
+	load_data <= load_data_reg;
+	
 	-- state_next
 	process (clk, rst, avalon_en, state_reg, cmd)
 	begin
@@ -51,7 +63,7 @@ begin
 		elsif rising_edge(clk) then
 			if avalon_en = '1' then
 				if state_reg = command then
-					if cmd = "100" then
+					if cmd = "100" and load_bit = '1' then
 						state_next <= load;
 					else
 						state_next <= command;
@@ -81,7 +93,23 @@ begin
 		end if;
 	end process;
 	
-	load_counter <= '1' when state_reg = load else '0';
+	-- load_counter_reg
+	process(clk, rst, state_reg, avalon_en)
+	begin
+		if rst = '1' then
+			load_counter_reg <= '0';
+		elsif rising_edge(clk) then
+			if state_reg = load and avalon_en = '1' then
+				load_counter_reg <= '1';
+			elsif state_reg = command and avalon_en = '1' and load_bit = '0' and cmd = "100" then
+				load_counter_reg <= '0';
+			else
+				load_counter_reg <= load_counter_reg;
+			end if;
+		end if;
+	end process;
+	
+	load_counter <= load_counter_reg;
 	
 	-- en_counter_reg
 	process(clk, rst, state_reg, avalon_en)
