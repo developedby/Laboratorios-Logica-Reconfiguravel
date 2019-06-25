@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="35" version="2.0">
+<workbench progressCount="36" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="2" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -13,14 +13,14 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -29,21 +29,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/aaa/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/software/teste_led/main.c" title="main.c" tooltip="teste_led/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/teste_led/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="402" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/aaa/Downloads/laboratorios-logica-reconfiguravel/nios_userhw/software/atravessador_uart/main.c" title="main.c" tooltip="atravessador_uart/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/atravessador_uart/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="634" selectionTopPixel="180"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -53,11 +42,6 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (2 items)"/>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -276,169 +260,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/teste_uart/hello_world_small.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/exemplo_nios/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/teste_uart_bsp/system.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/teste-uart/hello_world_small.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/teste_led/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/teste_led_bsp/create-this-bsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.make.editor" path="/teste_led_bsp/Makefile"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/teste_led_bsp/settings.bsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/atravessador_uart/main.c"/>
-</editors>
-<item historyLabel="system.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="34" y="0"/>
-</item>
-<item historyLabel="hello_world_small.c" index="0">
-<position info="not_deleted" x="1325" y="0"/>
-</item>
-<item historyLabel="hello_world_small.c" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="hello_world_small.c" index="3">
-<position info="not_deleted" x="3591" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="266" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="151" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="165" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="383" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="292" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="333" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="369" y="8"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="179" y="9"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="create-this-bsp" index="5">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="Makefile" index="6">
-<position info="not_deleted" x="2417" y="0"/>
-</item>
-<item historyLabel="create-this-bsp" index="5">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="Makefile" index="6">
-<position info="not_deleted" x="2417" y="0"/>
-</item>
-<item historyLabel="create-this-bsp" index="5">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="settings.bsp" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="402"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="600" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="525" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1437" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="192" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="196" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="200" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="208" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="212" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="216" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="220" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="228" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="173" y="58"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1318" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1341" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="478" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1007" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1081" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1117" y="0"/>
-</item>
-<item active="true" historyLabel="main.c" index="8">
-<position info="not_deleted" x="1120" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
