@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 25, 2019 11:46:13 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1561473973569</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\aaa\Downloads\PROJ_FINAL_GEOVANA_JIMMY\DE2_NET\software\simple_socket_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Jun 28, 2019 2:03:56 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1561698236568</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\aaa\Downloads\laboratorios-logica-reconfiguravel\eth_userhw\PROJ_FINAL_GEOVANA_JIMMY\DE2_NET\software\simple_socket_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\system_0.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -1751,30 +1751,6 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <Setting>
-                <SettingName>altera_avalon_uart_driver.enable_small_driver</SettingName>
-                <Identifier>ALTERA_AVALON_UART_SMALL</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Small-footprint (polled mode) driver</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
-        <Setting>
-                <SettingName>altera_avalon_uart_driver.enable_ioctl</SettingName>
-                <Identifier>ALTERA_AVALON_UART_USE_IOCTL</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Enable driver ioctl() support. This feature is not compatible with the 'small' driver; ioctl() support will not be compiled if either the UART 'enable_small_driver' or HAL 'enable_reduced_device_drivers' settings are enabled.</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
-        <Setting>
                 <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
                 <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
                 <Type>BooleanDefineOnly</Type>
@@ -1799,6 +1775,12 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
+                <slaveDescriptor>userhw_0</slaveDescriptor>
+                <addressRange>0x00003008 - 0x0000300B</addressRange>
+                <addressSpan>4</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sdram_0</slaveDescriptor>
                 <addressRange>0x00800000 - 0x00FFFFFF</addressRange>
                 <addressSpan>8388608</addressSpan>
@@ -1809,12 +1791,6 @@
                 <addressRange>0x01400000 - 0x017FFFFF</addressRange>
                 <addressSpan>4194304</addressSpan>
                 <attributes>flash, memory, non-volatile</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>VGA_0</slaveDescriptor>
-                <addressRange>0x01800000 - 0x019FFFFF</addressRange>
-                <addressSpan>2097152</addressSpan>
-                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sram_0</slaveDescriptor>
@@ -1829,12 +1805,6 @@
                 <attributes>flash, memory, non-volatile</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>uart_0</slaveDescriptor>
-                <addressRange>0x01A82000 - 0x01A8201F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>printable</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
                 <addressRange>0x01A82020 - 0x01A8203F</addressRange>
                 <addressSpan>32</addressSpan>
@@ -1845,24 +1815,6 @@
                 <addressRange>0x01A82040 - 0x01A8205F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>lcd_16207_0</slaveDescriptor>
-                <addressRange>0x01A82060 - 0x01A8206F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes>printable</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>led_red</slaveDescriptor>
-                <addressRange>0x01A82070 - 0x01A8207F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>led_green</slaveDescriptor>
-                <addressRange>0x01A82080 - 0x01A8208F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>button_pio</slaveDescriptor>
@@ -1877,40 +1829,10 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>SD_DAT</slaveDescriptor>
-                <addressRange>0x01A820B0 - 0x01A820BF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>SD_CMD</slaveDescriptor>
-                <addressRange>0x01A820C0 - 0x01A820CF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>SD_CLK</slaveDescriptor>
-                <addressRange>0x01A820D0 - 0x01A820DF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
                 <addressRange>0x01A820E0 - 0x01A820E7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>ISP1362_hc</slaveDescriptor>
-                <addressRange>0x01A820E8 - 0x01A820EF</addressRange>
-                <addressSpan>8</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>ISP1362_dc</slaveDescriptor>
-                <addressRange>0x01A820F0 - 0x01A820F7</addressRange>
-                <addressSpan>8</addressSpan>
-                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>DM9000A</slaveDescriptor>
@@ -1922,24 +1844,6 @@
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
                 <addressRange>0x01A82108 - 0x01A8210F</addressRange>
                 <addressSpan>8</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>Audio_0</slaveDescriptor>
-                <addressRange>0x01A82110 - 0x01A82113</addressRange>
-                <addressSpan>4</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>SEG7_Display</slaveDescriptor>
-                <addressRange>0x01A82114 - 0x01A82117</addressRange>
-                <addressSpan>4</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>userhw_0</slaveDescriptor>
-                <addressRange>0x01A82118 - 0x01A8211B</addressRange>
-                <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>

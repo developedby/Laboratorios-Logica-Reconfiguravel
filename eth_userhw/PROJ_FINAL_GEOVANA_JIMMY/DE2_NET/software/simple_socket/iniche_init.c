@@ -45,7 +45,6 @@
 #include "../simple_socket_bsp/iniche/src/h/libport.h"
 #include "../simple_socket_bsp/iniche/src/nios2/osport.h"
 #include "basic_io.h"
-#include "LCD.h"
 #include "altera_avalon_pio_regs.h"
 /* Definition of task stack for the initial task which will initialize the NicheStack
  * TCP/IP Stack and then initialize the rest of the Simple Socket Server example tasks. 
@@ -75,6 +74,7 @@ struct inet_taskinfo ssstask = {
  */
 void SSSInitialTask(void *task_data)
 {
+
   /*
    * Initialize Altera NicheStack TCP/IP Stack - Nios II Edition specific code.
    * NicheStack is initialized from a task, so that RTOS will have started, and 
@@ -91,38 +91,54 @@ void SSSInitialTask(void *task_data)
   while (!iniche_net_ready)
     TK_SLEEP(1);
 
-  /* Now that the stack is running, perform the application initialization steps */
-  
-  /* Application Specific Task Launching Code Block Begin */
-
   printf("\nSimple Socket Server starting up\n");
 
-  /* Create the main simple socket server task. */
-  //TK_NEWTASK(&ssstask);
-  
-  /*create os data structures */
-  //SSSCreateOSDataStructs();
+//  uint32_t a, b, read_var;
+//    volatile uint32_t *reg32 = USERHW_0_BASE;
+//    uint32_t timeout = 10000;
+//    while(1)
+//    {
+//  	  a = 0x87;
+//  	  *reg32 = a;
+//  	  for(b=0; b<1000; b++)
+//  	  	  ;
+//  	  a = 0xe0;
+//  	  *reg32 = a;
+//  	  for(b=0; b<1000; b++)
+//  	 	  ;
+//  	  a = 0x81;
+//  	  	  *reg32 = a;
+//  	  	  for(b=0; b<1000; b++)
+//  	  	 	  ;
+//  	  a = 0x60;
+//  	  *reg32 = a;
+//  	  for(b=0; b<1000; b++)
+//  	 	  ;
+//  	  for (b = 0; b < timeout; b++)
+//  	  {
+//  	    read_var = *reg32;
+//  	    if (read_var != a)
+//  	    	break;
+//  	  }
+//  	  if (b < timeout)
+//  		  printf("Leu: 0x%X. Demorou %d leituras\n", read_var, b);
+//  	  else
+//  		  printf("Não conseguiu ler\n");
+//  	  for(b=0; b<1000000; b++)
+//  		  ;
+//    }
 
-  /* create the other tasks */
-  //SSSCreateTasks();
 
-  /* Application Specific Task Launching Code Block End */
-  
-  /*This task is deleted because there is no need for it to run again */
-  //error_code = OSTaskDel(OS_PRIO_SELF);
-  //alt_uCOSIIErrorHandler(error_code, 0);
-  LCD_Init();
   struct sockaddr_in sa;
   int res;
   int SocketFD;
   int i;
-  char buf[2000] = {0};
-  volatile uint32_t *userhw_base = (uint32_t*) USERHW_0_BASE;
-  char rcv_cmd;
-  uint32_t userhw_regs;
-  char send_buf[4];
+  uint8_t buf[2000] = {0};
+  uint32_t volatile * volatile userhw_base = (uint32_t*) USERHW_0_BASE;
+  volatile uint8_t rcv_cmd;
+  volatile uint32_t userhw_regs;
+  uint8_t send_buf[4];
 
-  printf("estou aqui\n");
   SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
   printf("Socket criado\n");
   memset(&sa, 0, sizeof sa);
@@ -138,30 +154,39 @@ void SSSInitialTask(void *task_data)
   /* VVV Meu programa aqui VVV */
   while (1)
   {
-	if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+	// Recebe um byte
+	if (recv(SocketFD, buf, sizeof(buf), 0) < 0)
 	{
 	  		perror("Erro de recebimento");
 	  		exit(EXIT_FAILURE);
 	}
 
 	rcv_cmd = buf[0];
-	printf("Comando recebido: %d\n", rcv_cmd);
-
 	*userhw_base = rcv_cmd;
+
+	printf("Comando recebido: 0x%X\n", rcv_cmd);
 
 	// Se e um comando de leitura
 	if ((rcv_cmd & 0x80) == 0)
 	{
 		// Le e manda de volta
-		userhw_regs = *userhw_base;
+//		for(i=0; i<1000; i++)
+//		{
+			userhw_regs = *userhw_base;
+//		    if(userhw_regs != rcv_cmd)
+//			    break;
+//		}
+//		if(i == 1000)
+//			printf("Nao conseguiu ler\n");
+//		else
+			printf("Leitura realizada\n"); //em %d tentativas\n", i);
 
-		printf("Leitura realizada!\n");
 		printf("0: %d\n", userhw_regs & 0xff);
-		printf("1: %d\n\n", (userhw_regs>>8) & 0xff);
+		printf("1: %d\n\n", (userhw_regs >> 8) & 0xff);
 
 		for (i=0; i<sizeof(send_buf); i++)
 		{
-			send_buf[i] = (userhw_regs & 0xff) >> 4*i;
+			send_buf[i] = (userhw_regs >> (8*i)) & 0xff;
 		}
 		if (send(SocketFD, send_buf, sizeof(send_buf), 0) < 0)
 		{
@@ -177,7 +202,6 @@ void SSSInitialTask(void *task_data)
 
 int main (int argc, char* argv[], char* envp[])
 {
-  
   INT8U error_code;
 
   DM9000A_INSTANCE( DM9000A_0, dm9000a_0 );

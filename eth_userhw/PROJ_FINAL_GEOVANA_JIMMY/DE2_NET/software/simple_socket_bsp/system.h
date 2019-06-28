@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: ../../system_0.sopcinfo
  *
- * Generated: Tue Jun 25 11:46:03 BRT 2019
+ * Generated: Fri Jun 28 01:34:29 BRT 2019
  */
 
 /*
@@ -56,20 +56,6 @@
 
 
 /*
- * Audio_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_Audio_0 audio_dac_fifo
-#define AUDIO_0_BASE 0x1a82110
-#define AUDIO_0_IRQ -1
-#define AUDIO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define AUDIO_0_NAME "/dev/Audio_0"
-#define AUDIO_0_SPAN 4
-#define AUDIO_0_TYPE "audio_dac_fifo"
-
-
-/*
  * CPU configuration
  *
  */
@@ -80,26 +66,25 @@
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
-#define ALT_CPU_CPU_IMPLEMENTATION "fast"
+#define ALT_CPU_CPU_IMPLEMENTATION "tiny"
 #define ALT_CPU_DATA_ADDR_WIDTH 0x19
-#define ALT_CPU_DCACHE_LINE_SIZE 4
-#define ALT_CPU_DCACHE_LINE_SIZE_LOG2 2
-#define ALT_CPU_DCACHE_SIZE 2048
+#define ALT_CPU_DCACHE_LINE_SIZE 0
+#define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
+#define ALT_CPU_DCACHE_SIZE 0
 #define ALT_CPU_EXCEPTION_ADDR 0x800020
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
-#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 1
+#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 0
 #define ALT_CPU_HARDWARE_MULX_PRESENT 0
 #define ALT_CPU_HAS_DEBUG_CORE 1
 #define ALT_CPU_HAS_DEBUG_STUB
 #define ALT_CPU_HAS_JMPI_INSTRUCTION
-#define ALT_CPU_ICACHE_LINE_SIZE 32
-#define ALT_CPU_ICACHE_LINE_SIZE_LOG2 5
-#define ALT_CPU_ICACHE_SIZE 4096
+#define ALT_CPU_ICACHE_LINE_SIZE 0
+#define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
+#define ALT_CPU_ICACHE_SIZE 0
 #define ALT_CPU_INST_ADDR_WIDTH 0x19
 #define ALT_CPU_NAME "cpu_0"
-#define ALT_CPU_NUM_OF_SHADOW_REG_SETS 0
 #define ALT_CPU_RESET_ADDR 0x1400000
 
 
@@ -113,24 +98,23 @@
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
-#define NIOS2_CPU_IMPLEMENTATION "fast"
+#define NIOS2_CPU_IMPLEMENTATION "tiny"
 #define NIOS2_DATA_ADDR_WIDTH 0x19
-#define NIOS2_DCACHE_LINE_SIZE 4
-#define NIOS2_DCACHE_LINE_SIZE_LOG2 2
-#define NIOS2_DCACHE_SIZE 2048
+#define NIOS2_DCACHE_LINE_SIZE 0
+#define NIOS2_DCACHE_LINE_SIZE_LOG2 0
+#define NIOS2_DCACHE_SIZE 0
 #define NIOS2_EXCEPTION_ADDR 0x800020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
-#define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
+#define NIOS2_HARDWARE_MULTIPLY_PRESENT 0
 #define NIOS2_HARDWARE_MULX_PRESENT 0
 #define NIOS2_HAS_DEBUG_CORE 1
 #define NIOS2_HAS_DEBUG_STUB
 #define NIOS2_HAS_JMPI_INSTRUCTION
-#define NIOS2_ICACHE_LINE_SIZE 32
-#define NIOS2_ICACHE_LINE_SIZE_LOG2 5
-#define NIOS2_ICACHE_SIZE 4096
+#define NIOS2_ICACHE_LINE_SIZE 0
+#define NIOS2_ICACHE_LINE_SIZE_LOG2 0
+#define NIOS2_ICACHE_SIZE 0
 #define NIOS2_INST_ADDR_WIDTH 0x19
-#define NIOS2_NUM_OF_SHADOW_REG_SETS 0
 #define NIOS2_RESET_ADDR 0x1400000
 
 
@@ -155,144 +139,15 @@
 
 #define __ALTERA_AVALON_EPCS_FLASH_CONTROLLER
 #define __ALTERA_AVALON_JTAG_UART
-#define __ALTERA_AVALON_LCD_16207
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
-#define __ALTERA_AVALON_UART
 #define __ALTERA_GENERIC_TRISTATE_CONTROLLER
 #define __ALTERA_NIOS2_QSYS
-#define __AUDIO_DAC_FIFO
-#define __BINARY_VGA_CONTROLLER
 #define __DM9000A
-#define __ISP1362_IF
-#define __SEG7_LUT_8
 #define __SRAM_16BIT_512K
 #define __USERHW
-
-
-/*
- * ISP1362_dc configuration
- *
- */
-
-#define ALT_MODULE_CLASS_ISP1362_dc ISP1362_IF
-#define ISP1362_DC_BASE 0x1a820f0
-#define ISP1362_DC_IRQ 8
-#define ISP1362_DC_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define ISP1362_DC_NAME "/dev/ISP1362_dc"
-#define ISP1362_DC_SPAN 8
-#define ISP1362_DC_TYPE "ISP1362_IF"
-
-
-/*
- * ISP1362_hc configuration
- *
- */
-
-#define ALT_MODULE_CLASS_ISP1362_hc ISP1362_IF
-#define ISP1362_HC_BASE 0x1a820e8
-#define ISP1362_HC_IRQ 7
-#define ISP1362_HC_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define ISP1362_HC_NAME "/dev/ISP1362_hc"
-#define ISP1362_HC_SPAN 8
-#define ISP1362_HC_TYPE "ISP1362_IF"
-
-
-/*
- * SD_CLK configuration
- *
- */
-
-#define ALT_MODULE_CLASS_SD_CLK altera_avalon_pio
-#define SD_CLK_BASE 0x1a820d0
-#define SD_CLK_BIT_CLEARING_EDGE_REGISTER 0
-#define SD_CLK_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SD_CLK_CAPTURE 0
-#define SD_CLK_DATA_WIDTH 1
-#define SD_CLK_DO_TEST_BENCH_WIRING 0
-#define SD_CLK_DRIVEN_SIM_VALUE 0
-#define SD_CLK_EDGE_TYPE "NONE"
-#define SD_CLK_FREQ 50000000
-#define SD_CLK_HAS_IN 0
-#define SD_CLK_HAS_OUT 1
-#define SD_CLK_HAS_TRI 0
-#define SD_CLK_IRQ -1
-#define SD_CLK_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SD_CLK_IRQ_TYPE "NONE"
-#define SD_CLK_NAME "/dev/SD_CLK"
-#define SD_CLK_RESET_VALUE 0
-#define SD_CLK_SPAN 16
-#define SD_CLK_TYPE "altera_avalon_pio"
-
-
-/*
- * SD_CMD configuration
- *
- */
-
-#define ALT_MODULE_CLASS_SD_CMD altera_avalon_pio
-#define SD_CMD_BASE 0x1a820c0
-#define SD_CMD_BIT_CLEARING_EDGE_REGISTER 0
-#define SD_CMD_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SD_CMD_CAPTURE 0
-#define SD_CMD_DATA_WIDTH 1
-#define SD_CMD_DO_TEST_BENCH_WIRING 0
-#define SD_CMD_DRIVEN_SIM_VALUE 0
-#define SD_CMD_EDGE_TYPE "NONE"
-#define SD_CMD_FREQ 50000000
-#define SD_CMD_HAS_IN 0
-#define SD_CMD_HAS_OUT 0
-#define SD_CMD_HAS_TRI 1
-#define SD_CMD_IRQ -1
-#define SD_CMD_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SD_CMD_IRQ_TYPE "NONE"
-#define SD_CMD_NAME "/dev/SD_CMD"
-#define SD_CMD_RESET_VALUE 0
-#define SD_CMD_SPAN 16
-#define SD_CMD_TYPE "altera_avalon_pio"
-
-
-/*
- * SD_DAT configuration
- *
- */
-
-#define ALT_MODULE_CLASS_SD_DAT altera_avalon_pio
-#define SD_DAT_BASE 0x1a820b0
-#define SD_DAT_BIT_CLEARING_EDGE_REGISTER 0
-#define SD_DAT_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SD_DAT_CAPTURE 0
-#define SD_DAT_DATA_WIDTH 1
-#define SD_DAT_DO_TEST_BENCH_WIRING 0
-#define SD_DAT_DRIVEN_SIM_VALUE 0
-#define SD_DAT_EDGE_TYPE "NONE"
-#define SD_DAT_FREQ 50000000
-#define SD_DAT_HAS_IN 0
-#define SD_DAT_HAS_OUT 0
-#define SD_DAT_HAS_TRI 1
-#define SD_DAT_IRQ -1
-#define SD_DAT_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SD_DAT_IRQ_TYPE "NONE"
-#define SD_DAT_NAME "/dev/SD_DAT"
-#define SD_DAT_RESET_VALUE 0
-#define SD_DAT_SPAN 16
-#define SD_DAT_TYPE "altera_avalon_pio"
-
-
-/*
- * SEG7_Display configuration
- *
- */
-
-#define ALT_MODULE_CLASS_SEG7_Display seg7_lut_8
-#define SEG7_DISPLAY_BASE 0x1a82114
-#define SEG7_DISPLAY_IRQ -1
-#define SEG7_DISPLAY_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SEG7_DISPLAY_NAME "/dev/SEG7_Display"
-#define SEG7_DISPLAY_SPAN 4
-#define SEG7_DISPLAY_TYPE "seg7_lut_8"
 
 
 /*
@@ -329,20 +184,6 @@
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "system_0"
-
-
-/*
- * VGA_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_VGA_0 binary_vga_controller
-#define VGA_0_BASE 0x1800000
-#define VGA_0_IRQ -1
-#define VGA_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define VGA_0_NAME "/dev/VGA_0"
-#define VGA_0_SPAN 2097152
-#define VGA_0_TYPE "binary_vga_controller"
 
 
 /*
@@ -445,74 +286,6 @@
 
 
 /*
- * lcd_16207_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_lcd_16207_0 altera_avalon_lcd_16207
-#define LCD_16207_0_BASE 0x1a82060
-#define LCD_16207_0_IRQ -1
-#define LCD_16207_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LCD_16207_0_NAME "/dev/lcd_16207_0"
-#define LCD_16207_0_SPAN 16
-#define LCD_16207_0_TYPE "altera_avalon_lcd_16207"
-
-
-/*
- * led_green configuration
- *
- */
-
-#define ALT_MODULE_CLASS_led_green altera_avalon_pio
-#define LED_GREEN_BASE 0x1a82080
-#define LED_GREEN_BIT_CLEARING_EDGE_REGISTER 0
-#define LED_GREEN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define LED_GREEN_CAPTURE 0
-#define LED_GREEN_DATA_WIDTH 9
-#define LED_GREEN_DO_TEST_BENCH_WIRING 0
-#define LED_GREEN_DRIVEN_SIM_VALUE 0
-#define LED_GREEN_EDGE_TYPE "NONE"
-#define LED_GREEN_FREQ 50000000
-#define LED_GREEN_HAS_IN 0
-#define LED_GREEN_HAS_OUT 1
-#define LED_GREEN_HAS_TRI 0
-#define LED_GREEN_IRQ -1
-#define LED_GREEN_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LED_GREEN_IRQ_TYPE "NONE"
-#define LED_GREEN_NAME "/dev/led_green"
-#define LED_GREEN_RESET_VALUE 0
-#define LED_GREEN_SPAN 16
-#define LED_GREEN_TYPE "altera_avalon_pio"
-
-
-/*
- * led_red configuration
- *
- */
-
-#define ALT_MODULE_CLASS_led_red altera_avalon_pio
-#define LED_RED_BASE 0x1a82070
-#define LED_RED_BIT_CLEARING_EDGE_REGISTER 0
-#define LED_RED_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define LED_RED_CAPTURE 0
-#define LED_RED_DATA_WIDTH 18
-#define LED_RED_DO_TEST_BENCH_WIRING 0
-#define LED_RED_DRIVEN_SIM_VALUE 0
-#define LED_RED_EDGE_TYPE "NONE"
-#define LED_RED_FREQ 50000000
-#define LED_RED_HAS_IN 0
-#define LED_RED_HAS_OUT 1
-#define LED_RED_HAS_TRI 0
-#define LED_RED_IRQ -1
-#define LED_RED_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LED_RED_IRQ_TYPE "NONE"
-#define LED_RED_NAME "/dev/led_red"
-#define LED_RED_RESET_VALUE 0
-#define LED_RED_SPAN 16
-#define LED_RED_TYPE "altera_avalon_pio"
-
-
-/*
  * sdram_0 configuration
  *
  */
@@ -604,7 +377,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1561468937
+#define SYSID_QSYS_0_TIMESTAMP 1561695745
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -658,31 +431,6 @@
 #define TIMER_1_TICKS_PER_SEC 1000.0
 #define TIMER_1_TIMEOUT_PULSE_OUTPUT 0
 #define TIMER_1_TYPE "altera_avalon_timer"
-
-
-/*
- * uart_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_uart_0 altera_avalon_uart
-#define UART_0_BASE 0x1a82000
-#define UART_0_BAUD 115200
-#define UART_0_DATA_BITS 8
-#define UART_0_FIXED_BAUD 1
-#define UART_0_FREQ 50000000
-#define UART_0_IRQ 2
-#define UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define UART_0_NAME "/dev/uart_0"
-#define UART_0_PARITY 'N'
-#define UART_0_SIM_CHAR_STREAM ""
-#define UART_0_SIM_TRUE_BAUD 0
-#define UART_0_SPAN 32
-#define UART_0_STOP_BITS 1
-#define UART_0_SYNC_REG_DEPTH 2
-#define UART_0_TYPE "altera_avalon_uart"
-#define UART_0_USE_CTS_RTS 0
-#define UART_0_USE_EOP_REGISTER 0
 
 
 /*
@@ -769,7 +517,7 @@
  */
 
 #define ALT_MODULE_CLASS_userhw_0 userhw
-#define USERHW_0_BASE 0x1a82118
+#define USERHW_0_BASE 0x3008
 #define USERHW_0_IRQ -1
 #define USERHW_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define USERHW_0_NAME "/dev/userhw_0"

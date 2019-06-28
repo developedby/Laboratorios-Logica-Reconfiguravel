@@ -3,14 +3,11 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 ENTITY reg32_avalon_interface IS
-	PORT
-	(
-		clock, resetn : IN STD_LOGIC;
-		read, write, chipselect : IN STD_LOGIC;
-		writedata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		byteenable : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		readdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
-	);
+	PORT ( clock, resetn : IN STD_LOGIC;
+	read, write, chipselect : IN STD_LOGIC;
+	writedata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	byteenable : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	readdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END reg32_avalon_interface;
 
 ARCHITECTURE Structure OF reg32_avalon_interface IS
@@ -32,7 +29,6 @@ BEGIN
 	to_userhw <= writedata(7 downto 0);
 	WITH (chipselect AND write) SELECT
 		local_byteenable <= byteenable WHEN '1', "0000" WHEN OTHERS;
-		
 	user_hw: userhw
 	port map 
 	(
