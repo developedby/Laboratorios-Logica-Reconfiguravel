@@ -14,7 +14,7 @@ end entity;
 
 architecture arch of userhw is
 
-signal counter_load, counter_out, bit_counter_high_out, bit_counter_low_out: std_logic_vector(7 downto 0);
+signal counter_load, counter_out, counter_out_n, bit_counter_high_out, bit_counter_low_out: std_logic_vector(7 downto 0);
 signal counter_ld, counter_en: std_logic;
 signal out_sel: std_logic_vector(1 downto 0);
 
@@ -85,12 +85,14 @@ port map
 	bit_counter_high_out
 );
 
+counter_out_n <= counter_out;
+
 bit_counter_low : bit_counter
 port map
 (
 	clk,
 	rst,
-	not counter_out,
+	counter_out_n,
 	bit_counter_low_out
 );
 

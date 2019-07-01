@@ -1,0 +1,43 @@
+Passos para reproduzir esse projeto
+
+1 - Crie um projeto do Proteus para a placa DE2
+2 - Copie os arquivos para o diretório do projeto
+3 - Abra o no Qsys, selecione o arquivo .qsys copiado
+3.1 - Opcionalmente, para criar o projeto Qsys do 0:
+3.1.1 - Crie um novo projeto Qsys
+3.1.2 - Adicione uma on-chip memory com 8192 bytes de memória e chame-a de memory
+3.1.3 - Adicione um Nios II Processor chamado "cpu"
+3.1.3.1 - Selecione:
+	Nios II Core = Nios II/e;
+	Reset vector memory = memory.s1
+	Reset vector offset = 0x00000000
+	Exception vector memory = memory.s1
+	Exception vector offset = 0x00000020
+	Debug level = Level 1
+3.1.4 - Adicione uma JTAG UART com o nome jtag_uart
+3.1.5 - Crie um novo componente de nome reg32_avalon_interface
+3.1.5.1 - Adicione os arquivos "bit_counter.vhd", "cont8.vhd", "reg32_avalon_interface.vhd", "uart_byte_ctl.vhd", "userhw.vhd"
+3.1.5.2 - Selecione "reg32_avalon_interface.vhd" com top-level e faça análise de síntese dos arquivos
+3.1.5.3 - Em Signals, marque a interface de "clock" como "new Clock Input", de "resetn" como "new Reset Input" e de "Q_export" como "new Conduit", selecionando o Signal Type apropriado
+3.1.5.4 - Em "Interfaces", clique em "Remove Interfaces With No Signal" e associe "clock_sink" e "reset_sink" aos clocks e resets
+3.1.5.5 - Clique em Finish
+3.1.5.6 - Adicione esse componente com o nome reg32_avalon_interface_0
+3.1.6 - Faça as conexões dos sinais
+3.1.6.1 - Ligue os clocks em "clk_0.clk" e os resets em "clk_0.clk_reset"
+3.1.6.2 - Faça todas as conexões possíveis de "cpu.data_master"
+3.1.6.3 - Ligue "memory.reset1" e "cpu.reset_n" a "cpu.jtag_debug_module_reset"
+3.1.6.4 - Ligue "memory.s1" e "cpu.jtag_debug_module" a "cpu.instruction_master"
+3.1.7 - Selecione a IRQ de jtag_uart como "5"
+3.1.8 - Clique em "System->Assign Base Address"
+3.1.9 - Clique em Generation->Generate
+3.2 - Adicione o .qip gerado no projeto do Quartus
+4 - Abra o Eclipse
+4.1 - Selecione como workspace o subdiretório "software" que foi copiado
+4.2 - Gere o BSP de "atravessador_uart_bsp"
+4.3 - Compile "atravessador_uart_bsp" (talvez seja necessario alterar o caminho de onde os arquivos se encontram)
+4.4 - Compile "atravessador_uart"
+4.5 - Em ""atravessador_uart", "Make target->Build->mem_init_generate"
+4.6 - No Quartus, adicione o arquivo criado ao projeto ("./software/atravessador_uart/mem_init/meminit.qip")
+5 - Compile o projeto
+6 - Programe para a placa
+7 - Para executar, digite um numero para ser carregado no userhw dentro do terminal do Nios

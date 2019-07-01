@@ -15,6 +15,7 @@ ARCHITECTURE Structure OF reg32_avalon_interface IS
 SIGNAL local_byteenable : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL to_userhw: STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal from_userhw: std_logic_vector(15 downto 0);
+signal rst : std_logic;
 
 component userhw
 	port
@@ -27,14 +28,16 @@ component userhw
 end component;
 
 BEGIN
+	rst <= not resetn;
 	to_userhw <= writedata(7 downto 0);
 	WITH (chipselect AND write) SELECT
 		local_byteenable <= byteenable WHEN '1', "0000" WHEN OTHERS;
+		
 	user_hw: userhw
 	port map 
 	(
 		clock,
-		(not resetn),
+		rst,
 		to_userhw,
 		local_byteenable(0),
 		from_userhw
