@@ -378,7 +378,8 @@ system_0 	u0	(
                  .tri_state_bridge_0_data(FL_DQ),
                  .tri_state_bridge_0_readn(FL_OE_N),
                  .write_n_to_the_cfi_flash_0(FL_WE_N),
-
+					
+						.controller_pin_export               (GPIO_0[22]),
                 );
 
 I2C_AV_Config 	u1	(	//	Host Side

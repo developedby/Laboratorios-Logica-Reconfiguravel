@@ -33,7 +33,8 @@
 			sram_0_avalon_slave_0_export_LB_N : out   std_logic;                                        -- LB_N
 			sram_0_avalon_slave_0_export_WE_N : out   std_logic;                                        -- WE_N
 			sram_0_avalon_slave_0_export_CE_N : out   std_logic;                                        -- CE_N
-			sram_0_avalon_slave_0_export_OE_N : out   std_logic                                         -- OE_N
+			sram_0_avalon_slave_0_export_OE_N : out   std_logic;                                        -- OE_N
+			controller_pin_export             : inout std_logic                     := 'X'              -- export
 		);
 	end component system_0;
 

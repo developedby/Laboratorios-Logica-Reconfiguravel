@@ -1,0 +1,3 @@
+vcc 3.3v -> gpio0 coluna esquerda sexto pino de baixo pra cima
+ground -> pino a direita do vcc
+controle -> 2 pinos acima do vcc

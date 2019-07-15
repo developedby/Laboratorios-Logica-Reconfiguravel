@@ -1,0 +1,11 @@
+.\flash\exemplotiva.o: exemploTIVA.c
+.\flash\exemplotiva.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\exemplotiva.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\flash\exemplotiva.o: ..\driverlib/sysctl.h
+.\flash\exemplotiva.o: ..\driverlib/timer.h
+.\flash\exemplotiva.o: ..\driverlib/interrupt.h
+.\flash\exemplotiva.o: ..\driverlib/gpio.h
+.\flash\exemplotiva.o: ..\inc/tm4c1294ncpdt.h
+.\flash\exemplotiva.o: ..\inc/hw_gpio.h
+.\flash\exemplotiva.o: ..\driverlib/pin_map.h
+.\flash\exemplotiva.o: ..\inc/hw_memmap.h

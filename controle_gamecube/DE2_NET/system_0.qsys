@@ -36,14 +36,6 @@
          type = "long";
       }
    }
-   element userhw_0.avalon_slave_0
-   {
-      datum baseAddress
-      {
-         value = "12296";
-         type = "String";
-      }
-   }
    element sram_0.avalon_slave_0
    {
       datum baseAddress
@@ -116,6 +108,14 @@
          type = "int";
       }
    }
+   element gamecube_controller_0
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
    element cpu_0.jtag_debug_module
    {
       datum baseAddress
@@ -140,6 +140,14 @@
          type = "int";
       }
    }
+   element timer_1.s1
+   {
+      datum baseAddress
+      {
+         value = "27795520";
+         type = "long";
+      }
+   }
    element timer_0.s1
    {
       datum baseAddress
@@ -161,14 +169,6 @@
       datum baseAddress
       {
          value = "8388608";
-         type = "long";
-      }
-   }
-   element timer_1.s1
-   {
-      datum baseAddress
-      {
-         value = "27795520";
          type = "long";
       }
    }
@@ -252,14 +252,6 @@
          type = "long";
       }
    }
-   element userhw_0
-   {
-      datum _sortIndex
-      {
-         value = "16";
-         type = "int";
-      }
-   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -275,7 +267,7 @@
  <parameter name="projectName" value="DE2_NET.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1561603720428" />
+ <parameter name="timeStamp" value="1563155201124" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk_50_clk_in" internal="clk_50.clk_in" type="clock" dir="end">
@@ -338,6 +330,11 @@
  <interface
    name="sram_0_avalon_slave_0_export"
    internal="sram_0.avalon_slave_0_export"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="controller_pin"
+   internal="gamecube_controller_0.conduit_end"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_50">
@@ -572,7 +569,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cfi_flash_0.uas' start='0x1400000' end='0x1800000' /><slave name='cpu_0.jtag_debug_module' start='0x1A81000' end='0x1A81800' /><slave name='epcs_controller.epcs_control_port' start='0x1A81800' end='0x1A82000' /><slave name='sysid_qsys_0.control_slave' start='0x1A82108' end='0x1A82110' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='userhw_0.avalon_slave_0' start='0x3008' end='0x300C' /><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cfi_flash_0.uas' start='0x1400000' end='0x1800000' /><slave name='sram_0.avalon_slave_0' start='0x1A00000' end='0x1A80000' /><slave name='cpu_0.jtag_debug_module' start='0x1A81000' end='0x1A81800' /><slave name='epcs_controller.epcs_control_port' start='0x1A81800' end='0x1A82000' /><slave name='timer_0.s1' start='0x1A82020' end='0x1A82040' /><slave name='timer_1.s1' start='0x1A82040' end='0x1A82060' /><slave name='button_pio.s1' start='0x1A82090' end='0x1A820A0' /><slave name='switch_pio.s1' start='0x1A820A0' end='0x1A820B0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x1A820E0' end='0x1A820E8' /><slave name='DM9000A.avalon_slave_0' start='0x1A82100' end='0x1A82108' /><slave name='sysid_qsys_0.control_slave' start='0x1A82108' end='0x1A82110' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='gamecube_controller_0.avalon_slave_0' start='0x0' end='0x8' /><slave name='sdram_0.s1' start='0x800000' end='0x1000000' /><slave name='cfi_flash_0.uas' start='0x1400000' end='0x1800000' /><slave name='sram_0.avalon_slave_0' start='0x1A00000' end='0x1A80000' /><slave name='cpu_0.jtag_debug_module' start='0x1A81000' end='0x1A81800' /><slave name='epcs_controller.epcs_control_port' start='0x1A81800' end='0x1A82000' /><slave name='timer_0.s1' start='0x1A82020' end='0x1A82040' /><slave name='timer_1.s1' start='0x1A82040' end='0x1A82060' /><slave name='button_pio.s1' start='0x1A82090' end='0x1A820A0' /><slave name='switch_pio.s1' start='0x1A820A0' end='0x1A820B0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x1A820E0' end='0x1A820E8' /><slave name='DM9000A.avalon_slave_0' start='0x1A82100' end='0x1A82108' /><slave name='sysid_qsys_0.control_slave' start='0x1A82108' end='0x1A82110' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone II" />
   <parameter name="internalIrqMaskSystemInfo" value="123" />
@@ -696,7 +693,11 @@
  <module kind="sram_16bit_512k" version="1.0.1" enabled="1" name="sram_0">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
  </module>
- <module kind="userhw" version="1.0" enabled="1" name="userhw_0">
+ <module
+   kind="gamecube_controller"
+   version="1.0"
+   enabled="1"
+   name="gamecube_controller_0">
   <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
  </module>
  <connection kind="clock" version="13.0" start="clk_50.clk" end="sdram_0.clk" />
@@ -1066,19 +1067,19 @@
    kind="clock"
    version="13.0"
    start="clk_50.clk"
-   end="userhw_0.clock_sink" />
+   end="gamecube_controller_0.clock_sink" />
  <connection
    kind="reset"
    version="13.0"
    start="merged_resets.out_reset"
-   end="userhw_0.reset_sink" />
+   end="gamecube_controller_0.reset_sink" />
  <connection
    kind="avalon"
    version="13.0"
    start="cpu_0.data_master"
-   end="userhw_0.avalon_slave_0">
+   end="gamecube_controller_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x3008" />
+  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

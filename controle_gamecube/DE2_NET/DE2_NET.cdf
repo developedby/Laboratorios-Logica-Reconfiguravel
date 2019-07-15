@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/aaa/Downloads/laboratorios-logica-reconfiguravel/eth_userhw/PROJ_FINAL_GEOVANA_JIMMY/DE2_NET/") File("DE2_NET.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/aaa/Downloads/laboratorios-logica-reconfiguravel/controle_gamecube/DE2_NET/") File("DE2_NET.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

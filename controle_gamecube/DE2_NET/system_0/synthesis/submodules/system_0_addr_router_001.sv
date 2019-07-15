@@ -47,16 +47,16 @@ module system_0_addr_router_001_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 6 
+               DEFAULT_DESTID = 7 
    )
-  (output [89 - 86 : 0] default_destination_id,
+  (output [90 - 87 : 0] default_destination_id,
    output [13-1 : 0] default_wr_channel,
    output [13-1 : 0] default_rd_channel,
    output [13-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[89 - 86 : 0];
+    DEFAULT_DESTID[90 - 87 : 0];
 
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1) begin
@@ -95,7 +95,7 @@ module system_0_addr_router_001
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [100-1 : 0]    sink_data,
+    input  [101-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -104,7 +104,7 @@ module system_0_addr_router_001
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [100-1    : 0] src_data,
+    output reg [101-1    : 0] src_data,
     output reg [13-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -116,11 +116,11 @@ module system_0_addr_router_001
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 60;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 89;
-    localparam PKT_DEST_ID_L = 86;
-    localparam PKT_PROTECTION_H = 93;
-    localparam PKT_PROTECTION_L = 91;
-    localparam ST_DATA_W = 100;
+    localparam PKT_DEST_ID_H = 90;
+    localparam PKT_DEST_ID_L = 87;
+    localparam PKT_PROTECTION_H = 94;
+    localparam PKT_PROTECTION_L = 92;
+    localparam ST_DATA_W = 101;
     localparam ST_CHANNEL_W = 13;
     localparam DECODER_TYPE = 0;
 
@@ -136,7 +136,7 @@ module system_0_addr_router_001
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h300c - 64'h3008); 
+    localparam PAD0 = log2ceil(64'h8 - 64'h0); 
     localparam PAD1 = log2ceil(64'h1000000 - 64'h800000); 
     localparam PAD2 = log2ceil(64'h1800000 - 64'h1400000); 
     localparam PAD3 = log2ceil(64'h1a80000 - 64'h1a00000); 
@@ -197,16 +197,16 @@ module system_0_addr_router_001
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x3008 .. 0x300c )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h3008   ) begin
+    // ( 0x0 .. 0x8 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h0   ) begin
             src_channel = 13'b1000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x800000 .. 0x1000000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 25'h800000   ) begin
             src_channel = 13'b0000000000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x1400000 .. 0x1800000 )
@@ -218,7 +218,7 @@ module system_0_addr_router_001
     // ( 0x1a00000 .. 0x1a80000 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 25'h1a00000   ) begin
             src_channel = 13'b0100000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
     end
 
     // ( 0x1a81000 .. 0x1a81800 )
@@ -236,13 +236,13 @@ module system_0_addr_router_001
     // ( 0x1a82020 .. 0x1a82040 )
     if ( {address[RG:PAD6],{PAD6{1'b0}}} == 25'h1a82020   ) begin
             src_channel = 13'b0000001000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
 
     // ( 0x1a82040 .. 0x1a82060 )
     if ( {address[RG:PAD7],{PAD7{1'b0}}} == 25'h1a82040   ) begin
             src_channel = 13'b0000010000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 12;
     end
 
     // ( 0x1a82090 .. 0x1a820a0 )
@@ -254,13 +254,13 @@ module system_0_addr_router_001
     // ( 0x1a820a0 .. 0x1a820b0 )
     if ( {address[RG:PAD9],{PAD9{1'b0}}} == 25'h1a820a0   ) begin
             src_channel = 13'b0001000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
     end
 
     // ( 0x1a820e0 .. 0x1a820e8 )
     if ( {address[RG:PAD10],{PAD10{1'b0}}} == 25'h1a820e0   ) begin
             src_channel = 13'b0000000100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
     // ( 0x1a82100 .. 0x1a82108 )
@@ -272,7 +272,7 @@ module system_0_addr_router_001
     // ( 0x1a82108 .. 0x1a82110 )
     if ( {address[RG:PAD12],{PAD12{1'b0}}} == 25'h1a82108   ) begin
             src_channel = 13'b0000000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
 end
