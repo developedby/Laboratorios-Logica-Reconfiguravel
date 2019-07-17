@@ -238,7 +238,6 @@ void sss_handle_accept(int listen_socket, SSSConn* conn)
 void sss_exec_command(SSSConn* conn)
 {
    int bytes_to_process = conn->rx_wr_pos - conn->rx_rd_pos;
-   int i, j, height, width;
 
    INT8U tx_buf[SSS_TX_BUF_SIZE];
    INT8U *tx_wr_pos = tx_buf;

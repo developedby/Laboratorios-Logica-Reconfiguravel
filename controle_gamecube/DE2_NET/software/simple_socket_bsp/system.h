@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: ../../system_0.sopcinfo
  *
- * Generated: Fri Jun 28 01:34:29 BRT 2019
+ * Generated: Wed Jul 17 12:29:39 BRT 2019
  */
 
 /*
@@ -146,8 +146,8 @@
 #define __ALTERA_GENERIC_TRISTATE_CONTROLLER
 #define __ALTERA_NIOS2_QSYS
 #define __DM9000A
+#define __GAMECUBE_CONTROLLER
 #define __SRAM_16BIT_512K
-#define __USERHW
 
 
 /*
@@ -255,6 +255,20 @@
 #define EPCS_CONTROLLER_REGISTER_OFFSET 512
 #define EPCS_CONTROLLER_SPAN 2048
 #define EPCS_CONTROLLER_TYPE "altera_avalon_epcs_flash_controller"
+
+
+/*
+ * gamecube_controller_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_gamecube_controller_0 gamecube_controller
+#define GAMECUBE_CONTROLLER_0_BASE 0x1b00000
+#define GAMECUBE_CONTROLLER_0_IRQ -1
+#define GAMECUBE_CONTROLLER_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define GAMECUBE_CONTROLLER_0_NAME "/dev/gamecube_controller_0"
+#define GAMECUBE_CONTROLLER_0_SPAN 8
+#define GAMECUBE_CONTROLLER_0_TYPE "gamecube_controller"
 
 
 /*
@@ -377,7 +391,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1561695745
+#define SYSID_QSYS_0_TIMESTAMP 1563377336
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -509,19 +523,5 @@
 #define OS_TMR_CFG_TICKS_PER_SEC 10
 #define OS_TMR_CFG_WHEEL_SIZE 2
 #define OS_TMR_EN 0
-
-
-/*
- * userhw_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_userhw_0 userhw
-#define USERHW_0_BASE 0x3008
-#define USERHW_0_IRQ -1
-#define USERHW_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define USERHW_0_NAME "/dev/userhw_0"
-#define USERHW_0_SPAN 4
-#define USERHW_0_TYPE "userhw"
 
 #endif /* __SYSTEM_H_ */

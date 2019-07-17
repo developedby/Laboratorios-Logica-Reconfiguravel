@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 28, 2019 2:03:56 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1561698236568</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\aaa\Downloads\laboratorios-logica-reconfiguravel\eth_userhw\PROJ_FINAL_GEOVANA_JIMMY\DE2_NET\software\simple_socket_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Jul 17, 2019 12:29:39 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1563377379198</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\aaa\Downloads\laboratorios-logica-reconfiguravel\controle_gamecube\DE2_NET\software\simple_socket_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\system_0.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -1775,12 +1775,6 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>userhw_0</slaveDescriptor>
-                <addressRange>0x00003008 - 0x0000300B</addressRange>
-                <addressSpan>4</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>sdram_0</slaveDescriptor>
                 <addressRange>0x00800000 - 0x00FFFFFF</addressRange>
                 <addressSpan>8388608</addressSpan>
@@ -1843,6 +1837,12 @@
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
                 <addressRange>0x01A82108 - 0x01A8210F</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>gamecube_controller_0</slaveDescriptor>
+                <addressRange>0x01B00000 - 0x01B00007</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

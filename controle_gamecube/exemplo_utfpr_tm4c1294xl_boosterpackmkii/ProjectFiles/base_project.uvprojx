@@ -383,9 +383,9 @@
           <GroupName>Source Files</GroupName>
           <Files>
             <File>
-              <FileName>exemploTIVA.c</FileName>
+              <FileName>controle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\exemploTIVA.c</FilePath>
+              <FilePath>.\controle.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -798,9 +798,9 @@
           <GroupName>Source Files</GroupName>
           <Files>
             <File>
-              <FileName>exemploTIVA.c</FileName>
+              <FileName>controle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\exemploTIVA.c</FilePath>
+              <FilePath>.\controle.c</FilePath>
             </File>
           </Files>
         </Group>

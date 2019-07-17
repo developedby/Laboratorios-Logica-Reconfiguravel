@@ -1,6 +1,6 @@
 <session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C35 (0x020B40DD)" sof_file="">
   <display_tree gui_logging_enabled="1">
-    <display_branch instance="auto_signaltap_0" log="log: 2019/07/15 00:07:57  #2" signal_set="signal_set: 2019/07/15 00:07:57  #0" trigger="trigger: 2019/07/15 00:07:57  #1"/>
+    <display_branch instance="auto_signaltap_0" log="log: 2019/07/17 12:53:00  #0" signal_set="signal_set: 2019/07/15 00:07:57  #0" trigger="trigger: 2019/07/15 00:07:57  #1"/>
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
@@ -602,13 +602,12 @@
         <trigger_in_editor/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="B80150CB" attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2019/07/15 00:07:57  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+      <trigger CRC="B80150CB" attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2019/07/15 00:07:57  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">'system_0:u0|gc_avalon_interface:gamecube_controller_0|gamecube_controller:gc|crnt_state.waiting' == rising edge
             <power_up enabled="yes">
-            </power_up>
-            <op_node/>
+            </power_up><op_node/>
           </level>
         </events>
         <storage_qualifier_events>
@@ -653,7 +652,7 @@
     <single attribute="instance widget visible" value="1"/>
     <single attribute="jtag widget visible" value="1"/>
     <multi attribute="column width" size="23" value="34,34,647,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="frame size" size="2" value="1680,987"/>
+    <multi attribute="frame size" size="2" value="1920,1017"/>
     <multi attribute="jtag widget size" size="2" value="398,120"/>
   </global_info>
 </session>

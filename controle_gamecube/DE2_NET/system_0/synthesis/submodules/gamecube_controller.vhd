@@ -55,8 +55,9 @@ architecture arch of gamecube_controller is
 	 signal ctrl_wr_bit_quarter_counter_clr, ctrl_wr_bit_quarter_counter_en: std_logic;
 	 signal ctrl_wr_bit_quarter_counter_out: unsigned(6 downto 0);
 	 
-	 signal c0, c1 : std_logic_vector(3 downto 0);
-	 signal ctrl_wr_cmd : std_logic_vector (4*24-1 downto 0);
+	 signal c0, c1 : std_logic_vector(0 to 4);
+	 signal stop_bit : std_logic_vector(0 to 2);
+	 signal ctrl_wr_cmd : std_logic_vector (0 to (5*24)+3-1);
 	 signal ctrl_wr_out : std_logic;
 	 
 	 signal ctrl_rd_sample0_counter_clr, ctrl_rd_sample0_counter_en: std_logic;
@@ -164,7 +165,7 @@ begin
         elsif rising_edge(clk) then
             if timer_reading_timeout = '1' then
 					next_state <= writing;
-				elsif crnt_state = writing and ctrl_wr_bit_quarter_counter_out = 4*24 - 1 then
+				elsif crnt_state = writing and ctrl_wr_bit_quarter_counter_out = (5*24) + 3 - 1 then
 					next_state <= waiting;
 				elsif crnt_state = waiting and ctrl_last_sample = '1' and ctrl_data_out = '0' then
 					next_state <= reading;
@@ -179,9 +180,10 @@ begin
 	 ctrl_data_in <= ctrl_wr_out;
 	 ctrl_oe <= '1' when crnt_state = writing else '0';
 	 
-	 c0 <= "0001";
-	 c1 <= "0111";
-	 ctrl_wr_cmd <=  c0&c1&c0&c0 & c0&c0&c0&c0 & c0&c0&c0&c0 & c0&c0&c1&c1 & c0&c0&c0&c0 & c0&c0&c1&c0;
+	 c0 <= "00001";
+	 c1 <= "01111";
+	 stop_bit <= "011";
+	 ctrl_wr_cmd <=  c0&c1&c0&c0 & c0&c0&c0&c0 & c0&c0&c0&c0 & c0&c0&c1&c1 & c0&c0&c0&c0 & c0&c0&c0&c0 & stop_bit;
 	 ctrl_wr_out <= ctrl_wr_cmd(to_integer(ctrl_wr_bit_quarter_counter_out));
 	 
 	 -- ctrl_wr_bit_quarter_counter_clr, timer_ctrl_wr_bit_quarter_clr, ctrl_wr_bit_counter_clr

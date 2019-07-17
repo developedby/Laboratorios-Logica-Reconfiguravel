@@ -75,126 +75,77 @@ struct inet_taskinfo ssstask = {
 void SSSInitialTask(void *task_data)
 {
 
-  /*
-   * Initialize Altera NicheStack TCP/IP Stack - Nios II Edition specific code.
-   * NicheStack is initialized from a task, so that RTOS will have started, and 
-   * I/O drivers are available.  Two tasks are created:
-   *    "Inet main"  task with priority 2
-   *    "clock tick" task with priority 3
-   */   
-  alt_iniche_init();
-  netmain(); 
+	/*
+	* Initialize Altera NicheStack TCP/IP Stack - Nios II Edition specific code.
+	* NicheStack is initialized from a task, so that RTOS will have started, and
+	* I/O drivers are available.  Two tasks are created:
+	*    "Inet main"  task with priority 2
+	*    "clock tick" task with priority 3
+	*/
+	alt_iniche_init();
+	netmain();
 
-  /* Wait for the network stack to be ready before proceeding. 
-   * iniche_net_ready indicates that TCP/IP stack is ready, and IP address is obtained.
-   */
-  while (!iniche_net_ready)
-    TK_SLEEP(1);
+	/* Wait for the network stack to be ready before proceeding.
+	* iniche_net_ready indicates that TCP/IP stack is ready, and IP address is obtained.
+	*/
+	while (!iniche_net_ready)
+		TK_SLEEP(1);
 
-  printf("\nSimple Socket Server starting up\n");
+	printf("\nSimple Socket Server starting up\n");
 
-//  uint32_t a, b, read_var;
-//    volatile uint32_t *reg32 = USERHW_0_BASE;
-//    uint32_t timeout = 10000;
-//    while(1)
-//    {
-//  	  a = 0x87;
-//  	  *reg32 = a;
-//  	  for(b=0; b<1000; b++)
-//  	  	  ;
-//  	  a = 0xe0;
-//  	  *reg32 = a;
-//  	  for(b=0; b<1000; b++)
-//  	 	  ;
-//  	  a = 0x81;
-//  	  	  *reg32 = a;
-//  	  	  for(b=0; b<1000; b++)
-//  	  	 	  ;
-//  	  a = 0x60;
-//  	  *reg32 = a;
-//  	  for(b=0; b<1000; b++)
-//  	 	  ;
-//  	  for (b = 0; b < timeout; b++)
-//  	  {
-//  	    read_var = *reg32;
-//  	    if (read_var != a)
-//  	    	break;
-//  	  }
-//  	  if (b < timeout)
-//  		  printf("Leu: 0x%X. Demorou %d leituras\n", read_var, b);
-//  	  else
-//  		  printf("Não conseguiu ler\n");
-//  	  for(b=0; b<1000000; b++)
-//  		  ;
-//    }
+	struct sockaddr_in sa;
+	int res;
+	int SocketFD;
+	int i;
+	uint8_t buf[2000] = {0};
+	uint64_t volatile * volatile controller_base = (uint64_t*) GAMECUBE_CONTROLLER_0_BASE;
+	uint64_t controller_state;
+	uint8_t send_buf[8];
 
-
-  struct sockaddr_in sa;
-  int res;
-  int SocketFD;
-  int i;
-  uint8_t buf[2000] = {0};
-  uint32_t volatile * volatile userhw_base = (uint32_t*) USERHW_0_BASE;
-  volatile uint8_t rcv_cmd;
-  volatile uint32_t userhw_regs;
-  uint8_t send_buf[4];
-
-  SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-  printf("Socket criado\n");
-  memset(&sa, 0, sizeof sa);
-  sa.sin_family = AF_INET;
-  sa.sin_port = htons(7777); // ALTERAR PORTA A SER UTILIZADA AQUI
-  res = inet_pton(AF_INET, "10.3.2.201", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
-  if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
-	perror("Erro ao conectar");
-	close(SocketFD);
+	SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+	printf("Socket criado\n");
+	memset(&sa, 0, sizeof sa);
+	sa.sin_family = AF_INET;
+	sa.sin_port = htons(7777); // ALTERAR PORTA A SER UTILIZADA AQUI
+	res = inet_pton(AF_INET, "10.3.2.201", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
+	if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
+		perror("Erro ao conectar");
+		close(SocketFD);
 	exit(EXIT_FAILURE);
-  }
-
-  /* VVV Meu programa aqui VVV */
-  while (1)
-  {
-	// Recebe um byte
-	if (recv(SocketFD, buf, sizeof(buf), 0) < 0)
-	{
-	  		perror("Erro de recebimento");
-	  		exit(EXIT_FAILURE);
 	}
 
-	rcv_cmd = buf[0];
-	*userhw_base = rcv_cmd;
-
-	printf("Comando recebido: 0x%X\n", rcv_cmd);
-
-	// Se e um comando de leitura
-	if ((rcv_cmd & 0x80) == 0)
+	/* VVV Meu programa aqui VVV */
+	while (1)
 	{
+		*controller_base = 0;
+		controller_state = 0;
 		// Le e manda de volta
-//		for(i=0; i<1000; i++)
-//		{
-			userhw_regs = *userhw_base;
-//		    if(userhw_regs != rcv_cmd)
-//			    break;
-//		}
-//		if(i == 1000)
-//			printf("Nao conseguiu ler\n");
-//		else
+		for(i=0; i<1000; i++)
+		{
+			controller_state = *controller_base;
+			if(controller_state != 0)
+				break;
+		}
+		if(i == 1000)
+			printf("Nao conseguiu ler\n");
+		else
 			printf("Leitura realizada\n"); //em %d tentativas\n", i);
 
-		printf("0: %d\n", userhw_regs & 0xff);
-		printf("1: %d\n\n", (userhw_regs >> 8) & 0xff);
+		printf("%X\n", controller_state);
 
 		for (i=0; i<sizeof(send_buf); i++)
 		{
-			send_buf[i] = (userhw_regs >> (8*i)) & 0xff;
+			send_buf[i] = (controller_state >> (8*i)) & 0xff;
 		}
 		if (send(SocketFD, send_buf, sizeof(send_buf), 0) < 0)
 		{
 			perror("Erro de envio");
 			exit(EXIT_FAILURE);
 		}
+
+		for (i=0; i<1000000; i++)
+			;
 	}
-  }
 }
 
 /* Main creates a single task, SSSInitialTask, and starts task scheduler.
