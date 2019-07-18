@@ -81,7 +81,7 @@ int main (void)
 
 	GPIOIntRegister(GPIO_PORTG_BASE, commandStarted);
 	GPIOIntTypeSet(GPIO_PORTG_BASE, GPIO_PIN_2, GPIO_FALLING_EDGE);
-	GPIOIntClear(GPIO_PORTG_BASE, GPIO_PIN_2);
+	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_INT_PIN_4);
 
 	while(true)
 	{
@@ -171,11 +171,15 @@ int main (void)
 
 void commandStarted(void)
 {
+	GPIOIntClear(GPIO_PORTG_BASE, GPIO_PIN_2);
+	
 	int i;
 	sample_it = 0;
 	for(i = 0; i < STOP_BIT_SAMPLES; i++)
 		command_sample[i] = 0xF;
 	reading_command = true;
+	
+	GPIOIntDisable(GPIO_PORTF_BASE, GPIO_INT_PIN_4);
 }
 
 void TIMER0A_Handler(void)
@@ -221,5 +225,6 @@ void TIMER0A_Handler(void)
 			outputting_states = false;
 			GPIO_PORTG_AHB_DIR_R = 0;
 		}
+		GPIOIntEnable(GPIO_PORTF_BASE, GPIO_INT_PIN_4);
 	}
 }
